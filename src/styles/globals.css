@@ -38,6 +38,20 @@
 
   --color-blue-darker: #001e39;
   --color-blue-normal: #0056a3;
+
+  --animate-fluido: fluido 20s ease-in-out infinite;
+}
+
+@keyframes fluido {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 html,
