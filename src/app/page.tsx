@@ -5,7 +5,7 @@ import {
   DownloadApp,
   FAQ,
   Hero,
-} from "~/components/organisms";
+} from "~/components/templates";
 
 export default function HomePage() {
   return (
