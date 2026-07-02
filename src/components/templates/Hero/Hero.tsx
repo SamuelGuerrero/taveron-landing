@@ -31,6 +31,8 @@ interface HeroSlide {
   title: string;
   subtitle: string;
   ctaLabel: string;
+  ellipsesOffsets?: [string, string, string];
+  backgroundSrc?: string;
   image: {
     src: string;
     alt: string;
@@ -47,13 +49,17 @@ const slides: HeroSlide[] = [
     subtitle:
       "Soluciones pensadas para darte control, flexibilidad y confianza en cada paso de tu día.",
     ctaLabel: "Explorar tarjetas",
+    ellipsesOffsets: [
+      "calc(50%-329px-427px)",
+      "calc(50%-329px+25.45px)",
+      "calc(50%-329px+505.45px)",
+    ],
     image: {
       src: "/hero/default.svg",
       alt: "Tarjetas Taveron",
       width: 742,
       height: 692,
-      className:
-        "top-19.5 left-[calc(50%-50px)] h-173 w-185.5",
+      className: "top-19.5 left-[calc(50%-50px)] h-173 w-185.5",
     },
   },
   {
@@ -62,6 +68,7 @@ const slides: HeroSlide[] = [
     subtitle:
       "Tarjeta Clásica Taveron, disfruta de tus compras con control y seguridad.",
     ctaLabel: "Conoce más",
+    backgroundSrc: "/hero/backgrounds/classic.svg",
     image: {
       src: "/hero/classic.svg",
       alt: "Tarjeta Clásica Taveron",
@@ -70,7 +77,23 @@ const slides: HeroSlide[] = [
       className: "top-[101px] left-[calc(50%+73px)] h-[651px] w-[651px]",
     },
   },
+  {
+    badge: "Tarjeta Garantizada",
+    title: "Una tarjeta para comenzar, avanzar y crecer",
+    subtitle: "Ideal para iniciar o reconstruir tu historial.",
+    ctaLabel: "Conoce más",
+    backgroundSrc: "/hero/backgrounds/guaranteed.svg",
+    image: {
+      src: "/hero/guaranteed.svg",
+      alt: "Tarjeta Garantizada Taveron",
+      width: 749,
+      height: 709,
+      className: "top-[86px] left-[calc(50%-34px)] h-[709px] w-[749px]",
+    },
+  },
 ];
+
+const ELLIPSE_OPACITIES = [1, 0.7, 0.3];
 
 export const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -85,18 +108,44 @@ export const Hero = () => {
 
   return (
     <section className="bg-blue-darker relative h-225 w-full overflow-hidden text-white">
-      <div
-        aria-hidden
-        className="bg-blue-normal pointer-events-none absolute top-47.75 left-[calc(50%-329px-427px)] h-164.5 w-164.5 rounded-full blur-[123.439px]"
-      />
-      <div
-        aria-hidden
-        className="bg-blue-normal pointer-events-none absolute top-47.75 left-[calc(50%-329px+25.45px)] h-164.5 w-164.5 rounded-full opacity-70 blur-[123.439px]"
-      />
-      <div
-        aria-hidden
-        className="bg-blue-normal pointer-events-none absolute top-47.75 left-[calc(50%-329px+505.45px)] h-164.5 w-164.5 rounded-full opacity-30 blur-[123.439px]"
-      />
+      {slides.map((slide, index) => {
+        const isActive = index === currentIndex;
+        const fadeClasses = `pointer-events-none absolute inset-0 transition-opacity duration-700 ${isActive ? "opacity-100" : "opacity-0"}`;
+
+        if (slide.backgroundSrc) {
+          return (
+            <Image
+              key={`${slide.title}-bg`}
+              src={slide.backgroundSrc}
+              alt=""
+              fill
+              priority={index === 0}
+              className={`${fadeClasses} object-cover`}
+              aria-hidden
+            />
+          );
+        }
+
+        if (slide.ellipsesOffsets) {
+          return (
+            <div
+              key={`${slide.title}-glow`}
+              aria-hidden
+              className={fadeClasses}
+            >
+              {slide.ellipsesOffsets.map((offset, i) => (
+                <div
+                  key={i}
+                  className="bg-blue-normal absolute top-47.75 h-164.5 w-164.5 rounded-full blur-[123.439px]"
+                  style={{ left: offset, opacity: ELLIPSE_OPACITIES[i] }}
+                />
+              ))}
+            </div>
+          );
+        }
+
+        return null;
+      })}
 
       {slides.map((slide, index) => (
         <Image
