@@ -1,4 +1,9 @@
-import { CardsCarousel, CardsShowcase, Hero } from "~/components/organisms";
+import {
+  CardBenefits,
+  CardsCarousel,
+  CardsShowcase,
+  Hero,
+} from "~/components/organisms";
 
 export default function HomePage() {
   return (
@@ -6,6 +11,7 @@ export default function HomePage() {
       <Hero />
       <CardsShowcase />
       <CardsCarousel />
+      <CardBenefits />
     </main>
   );
 }
