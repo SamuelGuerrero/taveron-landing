@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
 
 import { type Metadata } from "next";
-import { Navbar } from "~/components/organisms";
+import { Footer, Navbar } from "~/components/organisms";
 
 export const metadata: Metadata = {
   title: "Taveron",
@@ -17,6 +17,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
