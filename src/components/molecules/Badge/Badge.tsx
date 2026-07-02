@@ -10,7 +10,7 @@ interface BadgeProps {
 }
 
 const variantClasses: Record<BadgeVariant, string> = {
-  white: "border-white bg-white/10 rounded-[70px]",
+  white: "border-white/60 bg-white/10 rounded-[70px] backdrop-blur-md",
   outline: "border-blue-normal text-blue-normal rounded-[27px]",
 };
 
