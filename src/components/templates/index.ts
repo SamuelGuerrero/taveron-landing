@@ -5,3 +5,4 @@ export * from './CardBenefits';
 export * from './DownloadApp';
 export * from './FAQ';
 export * from './ClassicHero';
+export * from './ClassicBenefits';
