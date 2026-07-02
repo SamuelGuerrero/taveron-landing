@@ -104,7 +104,7 @@ export const Hero = () => {
     }, AUTO_ROTATE_MS);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [currentIndex]);
 
   return (
     <section className="bg-blue-darker relative h-225 w-full overflow-hidden text-white">
