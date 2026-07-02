@@ -1,9 +1,10 @@
-import { Hero } from "~/components/organisms";
+import { CardsShowcase, Hero } from "~/components/organisms";
 
 export default function HomePage() {
   return (
     <main>
       <Hero />
+      <CardsShowcase />
     </main>
   );
 }
