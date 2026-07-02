@@ -3,6 +3,7 @@ import {
   CardsCarousel,
   CardsShowcase,
   DownloadApp,
+  FAQ,
   Hero,
 } from "~/components/organisms";
 
@@ -14,6 +15,7 @@ export default function HomePage() {
       <CardsCarousel />
       <CardBenefits />
       <DownloadApp />
+      <FAQ />
     </main>
   );
 }
