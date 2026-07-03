@@ -1,11 +1,19 @@
-import { Text } from "~/components/atoms/Text/Text";
+import {
+  FAQ,
+  GuaranteedAdvantages,
+  GuaranteedHero,
+  GuaranteedProducts,
+  GuaranteedSteps,
+} from "~/components/templates";
 
 export default function TarjetaGarantizadaPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <Text as="h1" weight="bold" size={48}>
-        Tarjeta Garantizada
-      </Text>
+    <main>
+      <GuaranteedHero />
+      <GuaranteedSteps />
+      <GuaranteedAdvantages />
+      <GuaranteedProducts />
+      <FAQ />
     </main>
   );
 }
