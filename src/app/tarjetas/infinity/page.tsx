@@ -1,11 +1,23 @@
-import { Text } from "~/components/atoms/Text/Text";
+import {
+  InfinityBenefits,
+  InfinityFAQ,
+  InfinityHero,
+  InfinityJoinTaveron,
+  InfinityPrivileges,
+  InfinityQuote,
+  InfinityStatement,
+} from "~/components/templates";
 
 export default function TarjetaInfinityPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <Text as="h1" weight="bold" size={48}>
-        Tarjeta Infinity
-      </Text>
+    <main>
+      <InfinityHero />
+      <InfinityStatement />
+      <InfinityPrivileges />
+      <InfinityQuote />
+      <InfinityBenefits />
+      <InfinityFAQ />
+      <InfinityJoinTaveron />
     </main>
   );
 }
