@@ -7,3 +7,4 @@ export * from './FAQ';
 export * from './ClassicHero';
 export * from './ClassicBenefits';
 export * from './ClassicSteps';
+export * from './JoinTaveron';
