@@ -10,3 +10,4 @@ export * from './ClassicSteps';
 export * from './JoinTaveron';
 export * from './GuaranteedHero';
 export * from './GuaranteedSteps';
+export * from './GuaranteedAdvantages';
