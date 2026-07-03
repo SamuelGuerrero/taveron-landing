@@ -1,7 +1,7 @@
 import React, { type ReactNode } from "react";
 import { Text } from "~/components/atoms";
 
-type BadgeVariant = "white" | "outline";
+type BadgeVariant = "white" | "outline" | "outline-white";
 
 interface BadgeProps {
   children: ReactNode;
@@ -12,6 +12,7 @@ interface BadgeProps {
 const variantClasses: Record<BadgeVariant, string> = {
   white: "border-white/60 bg-white/10 rounded-[70px] backdrop-blur-md",
   outline: "border-blue-normal text-blue-normal rounded-[27px]",
+  "outline-white": "border-white text-white rounded-[27px]",
 };
 
 export const Badge = ({
