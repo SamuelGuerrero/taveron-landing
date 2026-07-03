@@ -11,3 +11,4 @@ export * from './JoinTaveron';
 export * from './GuaranteedHero';
 export * from './GuaranteedSteps';
 export * from './GuaranteedAdvantages';
+export * from './GuaranteedProducts';
