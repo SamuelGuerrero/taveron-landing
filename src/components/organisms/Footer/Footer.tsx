@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Logo, Text } from "~/components/atoms";
 
 interface LinkGroup {
@@ -79,10 +82,14 @@ const InstagramIcon = () => (
 );
 
 export const Footer = () => {
+  const pathname = usePathname();
   const year = new Date().getFullYear();
+  const isInfinityPage = pathname === "/tarjetas/infinity";
 
   return (
-    <footer className="w-full bg-blue-darker text-white">
+    <footer
+      className={`w-full text-white ${isInfinityPage ? "bg-black" : "bg-blue-darker"}`}
+    >
       <div className="mx-auto flex max-w-[1512px] flex-col px-[68px] pt-[63px] pb-10">
         <div className="flex items-start gap-[140px]">
           <div className="flex w-[163px] flex-col gap-10">
