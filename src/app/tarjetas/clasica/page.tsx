@@ -1,7 +1,10 @@
 import {
+  CardBenefits,
   ClassicBenefits,
   ClassicHero,
   ClassicSteps,
+  FAQ,
+  JoinTaveron,
 } from "~/components/templates";
 
 export default function TarjetaClasicaPage() {
@@ -10,6 +13,9 @@ export default function TarjetaClasicaPage() {
       <ClassicHero />
       <ClassicBenefits />
       <ClassicSteps />
+      <CardBenefits />
+      <JoinTaveron />
+      <FAQ />
     </main>
   );
 }
