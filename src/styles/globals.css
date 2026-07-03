@@ -35,9 +35,11 @@
 @theme {
   --font-sans: "Product Sans", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: var(--font-serif, "Cormorant Garamond"), ui-serif, Georgia, serif;
 
   --color-blue-darker: #001e39;
   --color-blue-normal: #0056a3;
+  --color-gold: #c4a35a;
 
   --animate-fluido: fluido 20s ease-in-out infinite;
 }

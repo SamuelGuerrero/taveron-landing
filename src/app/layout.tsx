@@ -1,7 +1,16 @@
 import "~/styles/globals.css";
 
 import { type Metadata } from "next";
+import { Cormorant_Garamond } from "next/font/google";
 import { Footer, Navbar } from "~/components/organisms";
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Taveron",
@@ -13,7 +22,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
+    <html lang="es" className={cormorantGaramond.variable}>
       <body>
         <Navbar />
         {children}
