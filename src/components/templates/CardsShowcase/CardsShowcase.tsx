@@ -5,12 +5,12 @@ import { Text } from "~/components/atoms";
 export const CardsShowcase = () => {
   return (
     <section className="relative h-[1040px] w-full overflow-hidden bg-white">
-      <div className="absolute top-[calc(50%-520px)] right-[-12.5%] left-[-12.43%] h-[1060px]">
+      <div className="absolute inset-0">
         <Image
           src="/Taveron-cards-collection.svg"
           alt="Colección de tarjetas Taveron"
           fill
-          className="object-contain"
+          className="object-cover"
         />
       </div>
 
