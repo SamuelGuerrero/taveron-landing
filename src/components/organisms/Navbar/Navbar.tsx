@@ -95,20 +95,14 @@ const cardOptions: CardOption[] = [
 export const Navbar = () => {
   const activeHref = "/";
   const [showCardsDropdown, setShowCardsDropdown] = useState(false);
-  const [dropdownPos, setDropdownPos] = useState({ left: 0, arrowLeft: 0 });
+  const [arrowLeft, setArrowLeft] = useState(0);
   const cardsTriggerRef = useRef<HTMLAnchorElement>(null);
-  const panelRef = useRef<HTMLDivElement>(null);
 
   const openCardsDropdown = () => {
     const trigger = cardsTriggerRef.current;
     if (trigger) {
       const rect = trigger.getBoundingClientRect();
-      const triggerCenter = rect.left + rect.width / 2;
-      const panelWidth = panelRef.current?.offsetWidth ?? 720;
-      const padding = 24;
-      const maxLeft = window.innerWidth - panelWidth - padding;
-      const left = Math.max(padding, Math.min(triggerCenter - panelWidth / 2, maxLeft));
-      setDropdownPos({ left, arrowLeft: triggerCenter - left });
+      setArrowLeft(rect.left + rect.width / 2);
     }
     setShowCardsDropdown(true);
   };
@@ -155,22 +149,18 @@ export const Navbar = () => {
       </header>
 
       <div
-        style={{ left: dropdownPos.left }}
-        className={`absolute top-[86px] transition-[opacity,transform] duration-300 ease-out ${
+        className={`absolute inset-x-0 top-[90px] transition-[opacity,transform] duration-300 ease-out ${
           showCardsDropdown
             ? "translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2 opacity-0"
         }`}
       >
-        <div
-          ref={panelRef}
-          className="relative rounded-[28px] border border-black/[0.06] bg-white p-4 shadow-[0_24px_60px_rgba(0,30,57,0.18)]"
-        >
+        <div className="relative bg-white shadow-[0_24px_60px_rgba(0,30,57,0.18)]">
           <div
-            style={{ left: dropdownPos.arrowLeft }}
-            className="absolute -top-[8px] h-[17px] w-[17px] -translate-x-1/2 rotate-45 rounded-tl-[5px] border-l border-t border-black/[0.06] bg-white"
+            style={{ left: arrowLeft }}
+            className="absolute -top-[8px] h-[17px] w-[17px] -translate-x-1/2 rotate-45 rounded-tl-[5px] border-t border-l border-black/[0.06] bg-white"
           />
-          <div className="flex gap-3">
+          <div className="mx-auto flex max-w-[1162px] justify-center gap-6 px-[83px] py-10">
             {cardOptions.map((card) => (
               <Link
                 key={card.label}
