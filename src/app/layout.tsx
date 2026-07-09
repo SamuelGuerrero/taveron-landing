@@ -3,6 +3,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
 import { Footer, Navbar } from "~/components/organisms";
+import { DownloadModalProvider } from "~/context/DownloadModalContext";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="es" className={cormorantGaramond.variable}>
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <DownloadModalProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </DownloadModalProvider>
       </body>
     </html>
   );

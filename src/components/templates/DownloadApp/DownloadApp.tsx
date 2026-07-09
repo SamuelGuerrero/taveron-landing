@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Text } from "~/components/atoms";
-import { Button } from "~/components/molecules";
+import { DownloadCtaButton } from "~/components/molecules";
 
 const ChevronRight = ({ className }: { className?: string }) => (
   <svg
@@ -65,12 +65,12 @@ export const DownloadApp = () => {
           </Text>
         </div>
 
-        <Button
+        <DownloadCtaButton
           className="w-[234px]!"
           rightIcon={<ChevronRight className="h-6 w-6 text-blue-normal" />}
         >
           Descargar ahora
-        </Button>
+        </DownloadCtaButton>
       </div>
     </section>
   );

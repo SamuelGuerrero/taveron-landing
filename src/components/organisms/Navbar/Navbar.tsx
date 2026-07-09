@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Logo } from "~/components/atoms/Logo/Logo";
 import { Text } from "~/components/atoms/Text/Text";
-import { Button } from "~/components/molecules/Button/Button";
+import { DownloadCtaButton } from "~/components/molecules/DownloadCtaButton/DownloadCtaButton";
 
 const ChevronRight = ({ className }: { className?: string }) => (
   <svg
@@ -143,9 +143,11 @@ export const Navbar = () => {
           })}
         </nav>
 
-        <Button rightIcon={<ChevronRight className="h-6 w-6 text-blue-normal" />}>
+        <DownloadCtaButton
+          rightIcon={<ChevronRight className="h-6 w-6 text-blue-normal" />}
+        >
           Solicita tu tarjeta
-        </Button>
+        </DownloadCtaButton>
       </header>
 
       <div

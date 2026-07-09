@@ -3,7 +3,7 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { Text } from "~/components/atoms";
-import { Badge, Button } from "~/components/molecules";
+import { Badge, DownloadCtaButton } from "~/components/molecules";
 
 const ChevronRight = ({ className }: { className?: string }) => (
   <svg
@@ -293,12 +293,12 @@ export const CardsCarousel = () => {
       </button>
 
       <div className="absolute bottom-[70px] left-1/2 -translate-x-1/2">
-        <Button
+        <DownloadCtaButton
           className="border-blue-normal w-[200px]! border"
           rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
         >
           Solicitar tarjeta
-        </Button>
+        </DownloadCtaButton>
       </div>
     </section>
   );
