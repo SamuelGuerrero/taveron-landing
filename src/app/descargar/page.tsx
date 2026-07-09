@@ -2,6 +2,7 @@ import React from "react";
 import { type Metadata } from "next";
 import { Logo, Text } from "~/components/atoms";
 import { StoreButtons } from "~/components/molecules/StoreButtons/StoreButtons";
+import { DownloadRedirect } from "./DownloadRedirect";
 
 export const metadata: Metadata = {
   title: "Descarga la app de Taveron",
@@ -12,6 +13,8 @@ export const metadata: Metadata = {
 export default function DescargarPage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-10 bg-blue-darker px-6 py-24 text-center text-white">
+      <DownloadRedirect />
+
       <Logo className="text-white" />
 
       <div className="flex max-w-[560px] flex-col items-center gap-5">
@@ -19,8 +22,8 @@ export default function DescargarPage() {
           Descarga la app de Taveron
         </Text>
         <Text size={18} className="text-white/80">
-          Da el primer paso hacia un mejor control financiero. Descarga la app,
-          solicita tu tarjeta y empieza a crecer con Taveron.
+          Te estamos llevando a tu tienda de aplicaciones. Si no ocurre
+          automáticamente, elige tu plataforma abajo.
         </Text>
       </div>
 

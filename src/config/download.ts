@@ -6,3 +6,14 @@ export const STORE_LINKS = {
 
 /** Route the download QR points to. */
 export const DOWNLOAD_PATH = "/descargar";
+
+/**
+ * Resolves the store to send a device to based on its user agent.
+ * Apple devices (iPhone, iPad, iPod, Mac) go to the App Store; everything
+ * else goes to Google Play. iPadOS 13+ reports as "Macintosh", so it is
+ * covered by the Mac match.
+ */
+export const getStoreUrl = (userAgent: string): string => {
+  const isApple = /iPhone|iPad|iPod|Macintosh|Mac OS X/i.test(userAgent);
+  return isApple ? STORE_LINKS.appStore : STORE_LINKS.googlePlay;
+};
