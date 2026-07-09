@@ -44,7 +44,7 @@ export const DownloadApp = () => {
         width={1512}
         height={841}
         priority
-        className="pointer-events-none absolute top-1/2 left-1/2 h-[841px] w-[1512px] max-w-none -translate-x-1/2 -translate-y-1/2 select-none"
+        className="pointer-events-none absolute top-1/2 left-1/2 h-auto w-full max-w-none -translate-x-1/2 -translate-y-1/2 select-none"
       />
 
       <div className="absolute top-1/2 left-1/2 flex w-[1047px] -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-10 text-white">
