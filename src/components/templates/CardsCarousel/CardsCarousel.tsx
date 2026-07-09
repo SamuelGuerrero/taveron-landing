@@ -274,23 +274,25 @@ export const CardsCarousel = () => {
         </div>
       </div>
 
-      <button
-        type="button"
-        aria-label="Anterior"
-        onClick={goPrev}
-        className="absolute top-[615px] left-16 z-30 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-[10px] bg-[#EBF2F6] transition-transform hover:scale-105"
-      >
-        <ChevronLeft className="text-blue-normal" />
-      </button>
+      <div className="absolute top-[615px] left-1/2 z-30 flex w-[920px] -translate-x-1/2 -translate-y-1/2 justify-between">
+        <button
+          type="button"
+          aria-label="Anterior"
+          onClick={goPrev}
+          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-[10px] bg-[#EBF2F6] transition-transform hover:scale-105"
+        >
+          <ChevronLeft className="text-blue-normal" />
+        </button>
 
-      <button
-        type="button"
-        aria-label="Siguiente"
-        onClick={goNext}
-        className="absolute top-[615px] right-16 z-30 flex h-10 w-10 -translate-y-1/2 cursor-pointer items-center justify-center rounded-[10px] bg-[#EBF2F6] transition-transform hover:scale-105"
-      >
-        <ChevronRight className="text-blue-normal" />
-      </button>
+        <button
+          type="button"
+          aria-label="Siguiente"
+          onClick={goNext}
+          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-[10px] bg-[#EBF2F6] transition-transform hover:scale-105"
+        >
+          <ChevronRight className="text-blue-normal" />
+        </button>
+      </div>
 
       <div className="absolute bottom-[70px] left-1/2 -translate-x-1/2">
         <DownloadCtaButton
