@@ -73,7 +73,7 @@ export const ClassicSteps = () => {
               width={363}
               height={595}
               priority
-              className="h-148.75 w-90.75 object-contain"
+              className="animate-breathe h-148.75 w-90.75 object-contain will-change-transform"
             />
           </div>
 
