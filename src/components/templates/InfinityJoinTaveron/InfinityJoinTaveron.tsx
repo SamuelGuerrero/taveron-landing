@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +17,7 @@ export const InfinityJoinTaveron = () => {
             </span>
           </div>
 
-          <h2 className="w-166.5 text-center font-serif text-[48px] leading-[58px] font-bold text-white">
+          <h2 className="w-166.5 text-center font-serif text-[48px] leading-14.5 font-bold text-white">
             Una app
             <br />
             <span className="text-[#C4A35A]">simplemente maravillosa</span>

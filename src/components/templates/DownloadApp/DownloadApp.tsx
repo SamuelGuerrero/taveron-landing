@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { Text } from "~/components/atoms";
 import { DownloadCtaButton } from "~/components/molecules";
@@ -53,7 +52,7 @@ export const DownloadApp = () => {
             as="h2"
             weight="bold"
             size={48}
-            className="w-261.75 text-center leading-[58px]"
+            className="w-261.75 text-center leading-14.5"
           >
             Transformamos la manera en que usas tu dinero
           </Text>

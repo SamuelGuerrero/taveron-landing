@@ -1,7 +1,6 @@
-import React from "react";
 import { type Metadata } from "next";
 import { Logo, Text } from "~/components/atoms";
-import { StoreButtons } from "~/components/molecules/StoreButtons/StoreButtons";
+import { StoreButtons } from "~/components/molecules";
 import { DownloadRedirect } from "./DownloadRedirect";
 
 export const metadata: Metadata = {

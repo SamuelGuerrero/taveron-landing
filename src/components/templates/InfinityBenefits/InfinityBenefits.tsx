@@ -156,7 +156,7 @@ export const InfinityBenefits = () => {
             Nuestros Beneficios
           </span>
         </div>
-        <h2 className="w-139.5 text-center font-serif text-[48px] leading-[58px] font-bold text-[#C4A35A]">
+        <h2 className="w-139.5 text-center font-serif text-[48px] leading-14.5 font-bold text-[#C4A35A]">
           Tu tarjeta, <span className="text-white">con ventajas reales</span>
         </h2>
       </div>

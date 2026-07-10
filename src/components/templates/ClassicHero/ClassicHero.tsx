@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Text } from "~/components/atoms";
@@ -29,7 +28,7 @@ export const ClassicHero = () => {
         <div className="flex flex-col gap-5">
           <Badge>Tarjeta Clásica</Badge>
 
-          <Text as="h1" weight="bold" size={72} className="leading-[82px]">
+          <Text as="h1" weight="bold" size={72} className="leading-20.5">
             Diseñada para empezar y seguir creciendo
           </Text>
 

@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Text } from "~/components/atoms";
@@ -60,14 +59,14 @@ export const GuaranteedSteps = () => {
             as="h2"
             weight="bold"
             size={48}
-            className="w-226.25 text-center leading-[58px]"
+            className="w-226.25 text-center leading-14.5"
           >
             ¿Cómo funciona?
           </Text>
         </div>
 
         <div className="flex w-243.75 items-center gap-15.5">
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <Image
               src="/hero/guaranteed.svg"
               alt="Tarjeta Garantizada Taveron"

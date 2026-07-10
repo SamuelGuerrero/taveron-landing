@@ -160,7 +160,7 @@ export const Navbar = () => {
         <div className="relative bg-white shadow-[0_24px_60px_rgba(0,30,57,0.18)]">
           <div
             style={{ left: arrowLeft }}
-            className="absolute -top-2 h-4.25 w-4.25 -translate-x-1/2 rotate-45 rounded-tl-[5px] border-t border-l border-black/[0.06] bg-white"
+            className="absolute -top-2 h-4.25 w-4.25 -translate-x-1/2 rotate-45 rounded-tl-[5px] border-t border-l border-black/6 bg-white"
           />
           <div className="mx-auto flex max-w-290.5 justify-center gap-6 px-20.75 py-10">
             {cardOptions.map((card) => (
@@ -168,7 +168,7 @@ export const Navbar = () => {
                 key={card.label}
                 href={card.href}
                 onClick={() => setShowCardsDropdown(false)}
-                className="group hover:ring-blue-normal/30 flex w-42 flex-col items-center gap-4 rounded-[20px] bg-gradient-to-br from-[#F7F8FA] to-[#EDF0F5] px-4 pt-7 pb-5 ring-1 ring-black/[0.04] transition-all duration-300 hover:-translate-y-1 hover:from-white hover:to-[#F2F5FA] hover:shadow-[0_16px_32px_rgba(0,30,57,0.12)]"
+                className="group hover:ring-blue-normal/30 flex w-42 flex-col items-center gap-4 rounded-[20px] bg-linear-to-br from-[#F7F8FA] to-[#EDF0F5] px-4 pt-7 pb-5 ring-1 ring-black/4 transition-all duration-300 hover:-translate-y-1 hover:from-white hover:to-[#F2F5FA] hover:shadow-[0_16px_32px_rgba(0,30,57,0.12)]"
               >
                 <div className="drop-shadow-[0_10px_18px_rgba(0,30,57,0.18)] transition-transform duration-300 group-hover:scale-[1.04]">
                   <Image
@@ -176,7 +176,7 @@ export const Navbar = () => {
                     alt={card.alt}
                     width={94}
                     height={152}
-                    className="h-34 w-21 rounded-[8px]"
+                    className="h-34 w-21 rounded-lg"
                   />
                 </div>
                 <Text

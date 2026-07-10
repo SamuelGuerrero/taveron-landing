@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 interface Step {
@@ -60,7 +59,7 @@ export const InfinityPrivileges = () => {
               Privilegios
             </span>
           </div>
-          <h2 className="w-141.5 text-center font-serif text-[48px] leading-[58px] font-bold text-[#C4A35A]">
+          <h2 className="w-141.5 text-center font-serif text-[48px] leading-14.5 font-bold text-[#C4A35A]">
             Cada beneficio,
             <br />
             cuidadosamente seleccionado.
@@ -68,7 +67,7 @@ export const InfinityPrivileges = () => {
         </div>
 
         <div className="flex w-243.75 items-center gap-15.5">
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <Image
               src="/tarjetas/infinity-vertical.svg"
               alt="Tarjeta Infinity Taveron"

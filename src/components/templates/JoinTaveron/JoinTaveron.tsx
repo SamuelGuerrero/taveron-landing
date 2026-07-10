@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Text } from "~/components/atoms";
@@ -34,7 +33,7 @@ export const JoinTaveron = () => {
             as="h2"
             weight="bold"
             size={60}
-            className="w-166.5 leading-[73px]"
+            className="w-166.5 leading-18.25"
           >
             Una app simplemente maravillosa
           </Text>

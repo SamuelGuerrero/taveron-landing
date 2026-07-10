@@ -84,7 +84,7 @@ export const FAQ = () => {
             as="h2"
             weight="bold"
             size={60}
-            className="text-blue-darker w-147.75 text-center leading-[73px]"
+            className="text-blue-darker w-147.75 text-center leading-18.25"
           >
             Preguntas frecuentes
           </Text>

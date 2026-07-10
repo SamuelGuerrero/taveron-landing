@@ -199,7 +199,7 @@ export const CardsCarousel = () => {
             as="h2"
             weight="bold"
             size={48}
-            className="w-290.5 text-center leading-[58px] text-white"
+            className="w-290.5 text-center leading-14.5 text-white"
           >
             Tarjetas que se adaptan a tu forma de vivir y trabajar
           </Text>

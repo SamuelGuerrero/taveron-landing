@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 
 export const InfinityStatement = () => {
@@ -24,7 +23,7 @@ export const InfinityStatement = () => {
         className="pointer-events-none absolute -top-26.75 left-1/2 z-10 h-143.5 w-143.5 max-w-none -translate-x-1/2 select-none"
       />
 
-      <p className="absolute top-130 left-1/2 w-228.75 -translate-x-1/2 text-center font-serif text-[64px] leading-[82px] font-semibold text-white italic">
+      <p className="absolute top-130 left-1/2 w-228.75 -translate-x-1/2 text-center font-serif text-[64px] leading-20.5 font-semibold text-white italic">
         Diseñada para quienes se mueven con{" "}
         <span className="text-[#C4A35A]">criterio</span>, viajan con{" "}
         <span className="text-[#C4A35A]">respaldo</span> y consumen con{" "}

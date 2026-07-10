@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Text } from "~/components/atoms";
@@ -25,7 +24,7 @@ export const GuaranteedHero = () => {
               as="h1"
               weight="bold"
               size={72}
-              className="w-208.5 text-center leading-[82px]"
+              className="w-208.5 text-center leading-20.5"
             >
               Tu puerta al crédito empieza aquí
             </Text>
@@ -62,7 +61,7 @@ export const GuaranteedHero = () => {
         <Text
           weight="bold"
           size={54.155}
-          className="w-294.75 text-center leading-[66px] text-[#003462]"
+          className="w-294.75 text-center leading-16.5 text-[#003462]"
         >
           Con Taveron puedes dar el primer paso hacia un mejor control
           financiero, de forma segura y acompañada.{" "}

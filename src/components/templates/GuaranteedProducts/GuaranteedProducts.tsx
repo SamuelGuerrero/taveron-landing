@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Text } from "~/components/atoms";
@@ -115,7 +114,7 @@ export const GuaranteedProducts = () => {
             as="h2"
             weight="bold"
             size={48}
-            className="w-190 text-center leading-[58px] text-white"
+            className="w-190 text-center leading-14.5 text-white"
           >
             Con tu tarjeta garantizada, también puedes aprovechar
           </Text>

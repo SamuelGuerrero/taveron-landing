@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { Text } from "~/components/atoms";
 
@@ -20,7 +19,7 @@ export const CardsShowcase = () => {
             as="h2"
             weight="bold"
             size={60}
-            className="w-183 text-center leading-[73px] text-[#003462]"
+            className="w-183 text-center leading-18.25 text-[#003462]"
           >
             Taveron impulsa tu
             <br />

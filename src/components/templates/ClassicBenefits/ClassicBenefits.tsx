@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { Text } from "~/components/atoms";
 import { Badge } from "~/components/molecules";
@@ -222,20 +221,20 @@ const SupportCard = () => (
       <div className="flex flex-col gap-2">
         <button
           type="button"
-          className="bg-blue-normal flex h-15.5 cursor-pointer items-center justify-center gap-2 rounded-[8px] text-white"
+          className="bg-blue-normal flex h-15.5 cursor-pointer items-center justify-center gap-2 rounded-lg text-white"
         >
           <WhatsAppIcon className="h-6.75 w-6.75" />
-          <Text weight="bold" size={13.55} className="leading-[17px]">
+          <Text weight="bold" size={13.55} className="leading-4.25">
             Enviar whatsapp
           </Text>
           <ChevronRight className="h-5 w-5 text-white" />
         </button>
         <button
           type="button"
-          className="text-blue-normal flex h-15.5 cursor-pointer items-center justify-center gap-1 rounded-[8px] bg-[#D9E6F1]"
+          className="text-blue-normal flex h-15.5 cursor-pointer items-center justify-center gap-1 rounded-lg bg-[#D9E6F1]"
         >
           <MessageIcon className="h-7.5 w-7.5" />
-          <Text weight="bold" size={13.55} className="leading-[17px]">
+          <Text weight="bold" size={13.55} className="leading-4.25">
             Enviar correo electrónico
           </Text>
           <ChevronRight className="text-blue-normal h-5 w-5" />
@@ -358,7 +357,7 @@ export const ClassicBenefits = () => {
               as="h2"
               weight="bold"
               size={48}
-              className="w-177.25 text-center leading-[58px] text-[#003462]"
+              className="w-177.25 text-center leading-14.5 text-[#003462]"
             >
               Compra donde sea, cuando sea.
             </Text>

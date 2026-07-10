@@ -1,4 +1,3 @@
-import React from "react";
 import { Text } from "~/components/atoms";
 import { Badge } from "~/components/molecules";
 
@@ -131,7 +130,7 @@ export const GuaranteedAdvantages = () => {
               as="h2"
               weight="bold"
               size={48}
-              className="text-blue-darker w-138.5 text-center leading-[58px]"
+              className="text-blue-darker w-138.5 text-center leading-14.5"
             >
               Más que una Fintech:
               <br />
