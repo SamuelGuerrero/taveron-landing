@@ -39,17 +39,12 @@ const steps: Step[] = [
 export const GuaranteedSteps = () => {
   return (
     <section className="bg-blue-darker relative h-275.75 w-full overflow-hidden text-white">
-      <div
+      <Image
+        src="/guaranteed/steps-background.svg"
+        alt=""
+        fill
         aria-hidden
-        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px-341.8px)] rounded-full opacity-[0.59] blur-[90.4959px]"
-      />
-      <div
-        aria-hidden
-        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px-10.1px)] rounded-full opacity-70 blur-[90.4959px]"
-      />
-      <div
-        aria-hidden
-        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px+341.8px)] rounded-full opacity-30 blur-[90.4959px]"
+        className="pointer-events-none object-cover"
       />
 
       <div className="absolute top-29.5 left-1/2 flex w-243.75 -translate-x-1/2 flex-col items-center gap-12.5">
@@ -68,12 +63,12 @@ export const GuaranteedSteps = () => {
         <div className="flex w-243.75 items-center gap-15.5">
           <div className="shrink-0">
             <Image
-              src="/hero/guaranteed.svg"
+              src="/guaranteed/steps-card.svg"
               alt="Tarjeta Garantizada Taveron"
-              width={363}
-              height={595}
+              width={558}
+              height={810}
               priority
-              className="h-148.75 w-90.75 object-contain"
+              className="h-auto w-95 object-contain"
             />
           </div>
 
