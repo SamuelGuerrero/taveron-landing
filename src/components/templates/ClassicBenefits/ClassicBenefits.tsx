@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { Text } from "~/components/atoms";
 import { Badge } from "~/components/molecules";
 
@@ -138,7 +139,7 @@ const ChevronRight = ({ className }: { className?: string }) => (
 
 interface CardShellProps {
   variant?: "light" | "dark";
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const CardShell = ({ variant = "light", children }: CardShellProps) => (

@@ -1,12 +1,7 @@
 "use client";
 
-import React, {
-  createContext,
-  useContext,
-  useState,
-  type ReactNode,
-} from "react";
-import { DownloadAppModal } from "~/components/organisms/DownloadAppModal/DownloadAppModal";
+import { createContext, useContext, useState, type ReactNode } from "react";
+import { DownloadAppModal } from "~/components/organisms";
 
 interface DownloadModalContextValue {
   open: () => void;

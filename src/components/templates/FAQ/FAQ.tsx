@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Text } from "~/components/atoms";
 import { Badge } from "~/components/molecules";
 

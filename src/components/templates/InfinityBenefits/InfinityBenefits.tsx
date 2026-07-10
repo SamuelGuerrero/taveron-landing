@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Image from "next/image";
 
 const goldStroke = "#C4A35A";
@@ -115,7 +115,7 @@ const CreditScoreIcon = () => (
 interface Benefit {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 }
 
 const benefits: Benefit[] = [

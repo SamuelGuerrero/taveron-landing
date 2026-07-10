@@ -1,5 +1,5 @@
-import React, { type ReactNode } from "react";
-import { Text } from "~/components/atoms/Text/Text";
+import { type ReactNode } from "react";
+import { Text } from "~/components/atoms";
 
 interface ButtonProps {
   children: ReactNode;

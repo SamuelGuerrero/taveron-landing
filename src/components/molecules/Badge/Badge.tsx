@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { Text } from "~/components/atoms";
 
 type BadgeVariant = "white" | "outline" | "outline-white";

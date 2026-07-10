@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import { Text } from "~/components/atoms";
-import { StoreButtons } from "~/components/molecules/StoreButtons/StoreButtons";
+import { StoreButtons } from "~/components/molecules";
 import { DOWNLOAD_PATH } from "~/config/download";
 
 const CloseIcon = ({ className }: { className?: string }) => (

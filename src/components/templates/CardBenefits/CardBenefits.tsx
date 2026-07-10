@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Image from "next/image";
 import { Text } from "~/components/atoms";
 import { Badge } from "~/components/molecules";
@@ -8,7 +8,7 @@ import { Badge } from "~/components/molecules";
 interface Benefit {
   title: string;
   description?: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 }
 
 const iconClass = "h-7.5 w-7.5 text-blue-normal";

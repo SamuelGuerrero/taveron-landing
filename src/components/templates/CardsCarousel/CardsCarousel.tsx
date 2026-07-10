@@ -1,6 +1,12 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import {
+  useRef,
+  useState,
+  type CSSProperties,
+  type KeyboardEvent,
+  type TouchEvent,
+} from "react";
 import Image from "next/image";
 import { Text } from "~/components/atoms";
 import { Badge, DownloadCtaButton } from "~/components/molecules";
@@ -78,7 +84,7 @@ const cards: CarouselCard[] = [
 type CardPosition = "active" | "prev" | "next" | "hidden";
 
 // Coverflow transforms — replicated from the production carousel.
-const positionStyles: Record<CardPosition, React.CSSProperties> = {
+const positionStyles: Record<CardPosition, CSSProperties> = {
   active: {
     transform: "translate(-50%, -50%) scale(1)",
     opacity: 1,
@@ -105,7 +111,7 @@ const positionStyles: Record<CardPosition, React.CSSProperties> = {
 };
 
 // Hover variants — replicated from the production carousel (desktop).
-const positionStylesHover: Record<CardPosition, React.CSSProperties> = {
+const positionStylesHover: Record<CardPosition, CSSProperties> = {
   active: {
     transform: "translate(-50%, -50%) scale(1.02)",
     opacity: 1,
@@ -161,16 +167,16 @@ export const CardsCarousel = () => {
     return "hidden";
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "ArrowLeft") goPrev();
     if (e.key === "ArrowRight") goNext();
   };
 
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const handleTouchStart = (e: TouchEvent) => {
     touchStartX.current = e.changedTouches[0]?.screenX ?? 0;
   };
 
-  const handleTouchEnd = (e: React.TouchEvent) => {
+  const handleTouchEnd = (e: TouchEvent) => {
     const delta = (e.changedTouches[0]?.screenX ?? 0) - touchStartX.current;
     if (delta < -50) goNext();
     if (delta > 50) goPrev();

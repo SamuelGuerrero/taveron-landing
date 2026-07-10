@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Text } from "~/components/atoms";
 import { Badge } from "~/components/molecules";
 
@@ -87,7 +88,7 @@ const CheckIcon = () => (
 );
 
 interface Advantage {
-  icon: React.ReactNode;
+  icon: ReactNode;
   title: string;
   items: string[];
 }

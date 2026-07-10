@@ -1,11 +1,10 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Logo } from "~/components/atoms/Logo/Logo";
-import { Text } from "~/components/atoms/Text/Text";
-import { DownloadCtaButton } from "~/components/molecules/DownloadCtaButton/DownloadCtaButton";
+import { Logo, Text } from "~/components/atoms";
+import { DownloadCtaButton } from "~/components/molecules";
 
 const ChevronRight = ({ className }: { className?: string }) => (
   <svg

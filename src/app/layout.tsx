@@ -4,6 +4,7 @@ import { type Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
 import { Footer, Navbar } from "~/components/organisms";
 import { DownloadModalProvider } from "~/context/DownloadModalContext";
+import type { ReactNode } from "react";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="es" className={cormorantGaramond.variable}>
       <body>

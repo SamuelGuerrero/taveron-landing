@@ -1,7 +1,7 @@
 "use client";
 
-import React, { type ComponentProps } from "react";
-import { Button } from "~/components/molecules/Button/Button";
+import { type ComponentProps } from "react";
+import { Button } from "~/components/molecules";
 import { useDownloadModal } from "~/context/DownloadModalContext";
 
 type DownloadCtaButtonProps = Omit<ComponentProps<typeof Button>, "onClick">;
