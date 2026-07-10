@@ -144,7 +144,7 @@ export const Navbar = () => {
         </nav>
 
         <DownloadCtaButton
-          rightIcon={<ChevronRight className="h-6 w-6 text-blue-normal" />}
+          rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
         >
           Solicita tu tarjeta
         </DownloadCtaButton>
@@ -168,7 +168,7 @@ export const Navbar = () => {
                 key={card.label}
                 href={card.href}
                 onClick={() => setShowCardsDropdown(false)}
-                className="group flex w-[168px] flex-col items-center gap-4 rounded-[20px] bg-gradient-to-br from-[#F7F8FA] to-[#EDF0F5] px-4 pb-5 pt-7 ring-1 ring-black/[0.04] transition-all duration-300 hover:-translate-y-1 hover:from-white hover:to-[#F2F5FA] hover:shadow-[0_16px_32px_rgba(0,30,57,0.12)] hover:ring-blue-normal/30"
+                className="group hover:ring-blue-normal/30 flex w-[168px] flex-col items-center gap-4 rounded-[20px] bg-gradient-to-br from-[#F7F8FA] to-[#EDF0F5] px-4 pt-7 pb-5 ring-1 ring-black/[0.04] transition-all duration-300 hover:-translate-y-1 hover:from-white hover:to-[#F2F5FA] hover:shadow-[0_16px_32px_rgba(0,30,57,0.12)]"
               >
                 <div className="drop-shadow-[0_10px_18px_rgba(0,30,57,0.18)] transition-transform duration-300 group-hover:scale-[1.04]">
                   <Image
@@ -182,7 +182,7 @@ export const Navbar = () => {
                 <Text
                   weight="bold"
                   size={16}
-                  className="leading-5 text-blue-darker transition-colors group-hover:text-blue-normal"
+                  className="text-blue-darker group-hover:text-blue-normal leading-5 transition-colors"
                 >
                   {card.label}
                 </Text>

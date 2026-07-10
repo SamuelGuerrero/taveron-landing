@@ -29,7 +29,10 @@ interface DownloadAppModalProps {
   onClose: () => void;
 }
 
-export const DownloadAppModal = ({ isOpen, onClose }: DownloadAppModalProps) => {
+export const DownloadAppModal = ({
+  isOpen,
+  onClose,
+}: DownloadAppModalProps) => {
   const [downloadUrl, setDownloadUrl] = useState(
     `https://taveron.com${DOWNLOAD_PATH}`,
   );
@@ -59,7 +62,7 @@ export const DownloadAppModal = ({ isOpen, onClose }: DownloadAppModalProps) => 
       aria-hidden={!isOpen}
     >
       <div
-        className="absolute inset-0 bg-blue-darker/70 backdrop-blur-sm"
+        className="bg-blue-darker/70 absolute inset-0 backdrop-blur-sm"
         onClick={onClose}
       />
 
@@ -75,7 +78,7 @@ export const DownloadAppModal = ({ isOpen, onClose }: DownloadAppModalProps) => 
           type="button"
           onClick={onClose}
           aria-label="Cerrar"
-          className="absolute top-5 right-5 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-[#F1F3F6] text-blue-darker transition-colors hover:bg-[#E4E8EE]"
+          className="text-blue-darker absolute top-5 right-5 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-[#F1F3F6] transition-colors hover:bg-[#E4E8EE]"
         >
           <CloseIcon />
         </button>
@@ -84,7 +87,7 @@ export const DownloadAppModal = ({ isOpen, onClose }: DownloadAppModalProps) => 
           as="h2"
           weight="bold"
           size={32}
-          className="leading-tight text-blue-darker"
+          className="text-blue-darker leading-tight"
         >
           Descarga la app de Taveron
         </Text>

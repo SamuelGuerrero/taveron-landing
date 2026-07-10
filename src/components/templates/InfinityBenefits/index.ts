@@ -1,1 +1,1 @@
-export * from './InfinityBenefits';
+export * from "./InfinityBenefits";

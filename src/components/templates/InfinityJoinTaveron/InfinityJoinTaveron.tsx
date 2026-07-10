@@ -7,7 +7,7 @@ export const InfinityJoinTaveron = () => {
     <section className="relative h-[567px] w-full overflow-hidden bg-black text-white">
       <div
         aria-hidden
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[321px] w-[321px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C4A35A] opacity-30 blur-[123.42px]"
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[321px] w-[321px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C4A35A] opacity-30 blur-[123.42px]"
       />
 
       <div className="absolute top-1/2 left-1/2 isolate flex w-[975px] -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-[50px]">

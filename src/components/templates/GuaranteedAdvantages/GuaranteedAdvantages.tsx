@@ -68,25 +68,14 @@ const MoneyIcon = () => (
       stroke="currentColor"
       strokeWidth="3.4"
     />
-    <circle
-      cx="20.5"
-      cy="20.5"
-      r="5"
-      stroke="currentColor"
-      strokeWidth="3.4"
-    />
+    <circle cx="20.5" cy="20.5" r="5" stroke="currentColor" strokeWidth="3.4" />
     <circle cx="10" cy="15" r="1.5" fill="currentColor" />
     <circle cx="31" cy="26" r="1.5" fill="currentColor" />
   </svg>
 );
 
 const CheckIcon = () => (
-  <svg
-    viewBox="0 0 16 16"
-    fill="none"
-    className="h-4 w-4 shrink-0"
-    aria-hidden
-  >
+  <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4 shrink-0" aria-hidden>
     <circle cx="8" cy="8" r="8" fill="#0056A3" />
     <path
       d="M5 8l2 2 4-4"
@@ -142,7 +131,7 @@ export const GuaranteedAdvantages = () => {
               as="h2"
               weight="bold"
               size={48}
-              className="w-[554px] text-center leading-[58px] text-blue-darker"
+              className="text-blue-darker w-[554px] text-center leading-[58px]"
             >
               Más que una Fintech:
               <br />
@@ -150,7 +139,7 @@ export const GuaranteedAdvantages = () => {
             </Text>
             <Text
               size={20}
-              className="w-[554px] text-center leading-7 text-blue-darker"
+              className="text-blue-darker w-[554px] text-center leading-7"
             >
               Taveron combina innovación, cumplimiento y experiencia global:
             </Text>
@@ -170,7 +159,7 @@ export const GuaranteedAdvantages = () => {
                 <Text
                   weight="bold"
                   size={24}
-                  className="leading-8 text-blue-darker"
+                  className="text-blue-darker leading-8"
                 >
                   {advantage.title}
                 </Text>
@@ -180,10 +169,7 @@ export const GuaranteedAdvantages = () => {
                       <span className="mt-0.5">
                         <CheckIcon />
                       </span>
-                      <Text
-                        size={16}
-                        className="leading-5 text-blue-darker"
-                      >
+                      <Text size={16} className="text-blue-darker leading-5">
                         {item}
                       </Text>
                     </li>

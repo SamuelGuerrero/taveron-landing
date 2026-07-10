@@ -6,7 +6,12 @@ import Image from "next/image";
 const goldStroke = "#C4A35A";
 
 const BagIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" className="h-[30px] w-[30px]" aria-hidden>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    className="h-[30px] w-[30px]"
+    aria-hidden
+  >
     <path
       d="M4 8h16l-1 12H5L4 8z"
       stroke={goldStroke}
@@ -23,7 +28,12 @@ const BagIcon = () => (
 );
 
 const ShieldIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" className="h-[30px] w-[30px]" aria-hidden>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    className="h-[30px] w-[30px]"
+    aria-hidden
+  >
     <path
       d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"
       stroke={goldStroke}
@@ -41,7 +51,12 @@ const ShieldIcon = () => (
 );
 
 const CalendarIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" className="h-[30px] w-[30px]" aria-hidden>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    className="h-[30px] w-[30px]"
+    aria-hidden
+  >
     <rect
       x="4"
       y="5"
@@ -61,7 +76,12 @@ const CalendarIcon = () => (
 );
 
 const DiamondIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" className="h-[30px] w-[30px]" aria-hidden>
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    className="h-[30px] w-[30px]"
+    aria-hidden
+  >
     <path
       d="M6 3h12l4 6-10 12L2 9l4-6z"
       stroke={goldStroke}
@@ -229,10 +249,10 @@ export const InfinityBenefits = () => {
               <CreditScoreIcon />
             </div>
             <div className="flex flex-1 flex-col gap-1">
-              <p className="text-base font-bold leading-6 text-white">
+              <p className="text-base leading-6 font-bold text-white">
                 Compra aprobada para tu viaje a Europa, disfruta tu destino
               </p>
-              <p className="text-sm font-bold leading-5 text-white">
+              <p className="text-sm leading-5 font-bold text-white">
                 14 Enero, 2026
               </p>
             </div>

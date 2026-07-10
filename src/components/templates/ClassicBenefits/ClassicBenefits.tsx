@@ -4,7 +4,12 @@ import { Text } from "~/components/atoms";
 import { Badge } from "~/components/molecules";
 
 const LockIcon = () => (
-  <svg viewBox="0 0 46 46" fill="none" className="h-[46px] w-[46px]" aria-hidden>
+  <svg
+    viewBox="0 0 46 46"
+    fill="none"
+    className="h-[46px] w-[46px]"
+    aria-hidden
+  >
     <rect
       x="12"
       y="20"
@@ -25,7 +30,12 @@ const LockIcon = () => (
 );
 
 const HeadphonesIcon = () => (
-  <svg viewBox="0 0 46 46" fill="none" className="h-[46px] w-[46px]" aria-hidden>
+  <svg
+    viewBox="0 0 46 46"
+    fill="none"
+    className="h-[46px] w-[46px]"
+    aria-hidden
+  >
     <path
       d="M8 26v-3a15 15 0 0 1 30 0v3"
       stroke="#0056A3"
@@ -95,7 +105,12 @@ const KeypadIcon = () => (
 );
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden
+  >
     <path d="M17.5 6.5A7.7 7.7 0 0 0 12 4a7.7 7.7 0 0 0-6.7 11.5L4 20l4.7-1.2A7.7 7.7 0 0 0 12 19.7a7.7 7.7 0 0 0 5.5-13.2zM12 18.2a6.4 6.4 0 0 1-3.3-.9l-.2-.1-2.5.6.6-2.4-.2-.3A6.4 6.4 0 1 1 12 18.2zm3.5-4.8c-.2-.1-1.1-.5-1.3-.6-.2-.1-.3-.1-.4.1-.1.2-.5.6-.6.8-.1.1-.2.1-.4 0-.2-.1-.8-.3-1.6-1s-1.2-1.4-1.4-1.6c-.1-.2 0-.3.1-.4l.3-.4c.1-.1.1-.2.2-.4l.1-.4-.1-.4-.5-1.3c-.1-.3-.3-.3-.4-.3h-.4c-.1 0-.3 0-.5.2s-.7.7-.7 1.7c0 1 .7 2 .8 2.1.1.1 1.5 2.3 3.6 3.2.5.2.9.3 1.2.4.5.2 1 .1 1.4.1.4-.1 1.1-.5 1.3-.9.2-.5.2-.9.1-1z" />
   </svg>
 );
@@ -217,7 +232,7 @@ const SupportCard = () => (
       <div className="flex flex-col gap-2">
         <button
           type="button"
-          className="flex h-[62px] cursor-pointer items-center justify-center gap-2 rounded-[8px] bg-blue-normal text-white"
+          className="bg-blue-normal flex h-[62px] cursor-pointer items-center justify-center gap-2 rounded-[8px] text-white"
         >
           <WhatsAppIcon className="h-[27px] w-[27px]" />
           <Text weight="bold" size={13.55} className="leading-[17px]">
@@ -227,13 +242,13 @@ const SupportCard = () => (
         </button>
         <button
           type="button"
-          className="flex h-[62px] cursor-pointer items-center justify-center gap-1 rounded-[8px] bg-[#D9E6F1] text-blue-normal"
+          className="text-blue-normal flex h-[62px] cursor-pointer items-center justify-center gap-1 rounded-[8px] bg-[#D9E6F1]"
         >
           <MessageIcon className="h-[30px] w-[30px]" />
           <Text weight="bold" size={13.55} className="leading-[17px]">
             Enviar correo electrónico
           </Text>
-          <ChevronRight className="h-5 w-5 text-blue-normal" />
+          <ChevronRight className="text-blue-normal h-5 w-5" />
         </button>
       </div>
     </div>
@@ -274,7 +289,7 @@ const KeypadCard = () => (
         {["4", "6", "1", "7"].map((n) => (
           <div
             key={n}
-            className="flex h-[65px] w-[65px] items-center justify-center rounded-[7px] bg-blue-normal/10"
+            className="bg-blue-normal/10 flex h-[65px] w-[65px] items-center justify-center rounded-[7px]"
           >
             <Text weight="bold" size={46} className="text-blue-darker">
               {n}
@@ -307,10 +322,18 @@ const BorderlessCard = () => (
         <UsFlag />
         <div className="flex flex-col gap-2.5">
           <div className="flex flex-col gap-[3px]">
-            <Text weight="bold" size={16} className="leading-5 text-blue-darker">
+            <Text
+              weight="bold"
+              size={16}
+              className="text-blue-darker leading-5"
+            >
               Nike Factory New York
             </Text>
-            <Text weight="bold" size={20} className="leading-7 text-blue-darker">
+            <Text
+              weight="bold"
+              size={20}
+              className="text-blue-darker leading-7"
+            >
               $1,243.00 USD
             </Text>
           </div>
@@ -318,7 +341,7 @@ const BorderlessCard = () => (
             <Text size={14} className="leading-5 text-[#6B6B6B]">
               29 de Mayo, 2025
             </Text>
-            <div className="h-1 w-1 rounded-full bg-blue-normal" />
+            <div className="bg-blue-normal h-1 w-1 rounded-full" />
             <Text size={14} className="leading-5 text-[#6B6B6B]">
               14:53 hrs
             </Text>
@@ -326,7 +349,7 @@ const BorderlessCard = () => (
         </div>
       </div>
       <div className="absolute top-5 right-5 flex items-center rounded-full bg-[#E6EEF6] px-5 py-2.5">
-        <Text weight="bold" size={12} className="leading-4 text-blue-normal">
+        <Text weight="bold" size={12} className="text-blue-normal leading-4">
           Compra Aprobada
         </Text>
       </div>

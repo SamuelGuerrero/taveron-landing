@@ -24,18 +24,18 @@ const ChevronRight = ({ className }: { className?: string }) => (
 
 export const DownloadApp = () => {
   return (
-    <section className="relative h-[966px] w-full overflow-hidden bg-blue-darker">
+    <section className="bg-blue-darker relative h-[966px] w-full overflow-hidden">
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[416px] left-[calc(50%-241.2px-341.8px)] h-[482.4px] w-[482.4px] rounded-full bg-blue-normal opacity-[0.59] blur-[90.4959px]"
+        className="bg-blue-normal pointer-events-none absolute top-[416px] left-[calc(50%-241.2px-341.8px)] h-[482.4px] w-[482.4px] rounded-full opacity-[0.59] blur-[90.4959px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[416px] left-[calc(50%-241.2px-10.1px)] h-[482.4px] w-[482.4px] rounded-full bg-blue-normal opacity-70 blur-[90.4959px]"
+        className="bg-blue-normal pointer-events-none absolute top-[416px] left-[calc(50%-241.2px-10.1px)] h-[482.4px] w-[482.4px] rounded-full opacity-70 blur-[90.4959px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[416px] left-[calc(50%-241.2px+341.8px)] h-[482.4px] w-[482.4px] rounded-full bg-blue-normal opacity-30 blur-[90.4959px]"
+        className="bg-blue-normal pointer-events-none absolute top-[416px] left-[calc(50%-241.2px+341.8px)] h-[482.4px] w-[482.4px] rounded-full opacity-30 blur-[90.4959px]"
       />
 
       <Image
@@ -67,7 +67,7 @@ export const DownloadApp = () => {
 
         <DownloadCtaButton
           className="w-[234px]!"
-          rightIcon={<ChevronRight className="h-6 w-6 text-blue-normal" />}
+          rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
         >
           Descargar ahora
         </DownloadCtaButton>

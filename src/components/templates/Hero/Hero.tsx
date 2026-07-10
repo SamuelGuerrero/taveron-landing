@@ -155,7 +155,7 @@ export const Hero = () => {
           width={slide.image.width}
           height={slide.image.height}
           priority={index === 0}
-          className={`pointer-events-none absolute max-w-none select-none transition-opacity duration-700 ${slide.image.className} ${
+          className={`pointer-events-none absolute max-w-none transition-opacity duration-700 select-none ${slide.image.className} ${
             index === currentIndex ? "opacity-100" : "opacity-0"
           }`}
         />

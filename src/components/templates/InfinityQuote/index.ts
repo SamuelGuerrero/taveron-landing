@@ -1,1 +1,1 @@
-export * from './InfinityQuote';
+export * from "./InfinityQuote";

@@ -7,7 +7,7 @@ import { Badge } from "~/components/molecules";
 export const GuaranteedHero = () => {
   return (
     <div className="relative w-full">
-      <section className="relative h-[963px] w-full overflow-hidden bg-blue-darker text-white">
+      <section className="bg-blue-darker relative h-[963px] w-full overflow-hidden text-white">
         <Image
           src="/tarjetas/garantizada-hero.svg"
           alt=""

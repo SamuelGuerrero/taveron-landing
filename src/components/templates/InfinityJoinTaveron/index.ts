@@ -1,1 +1,1 @@
-export * from './InfinityJoinTaveron';
+export * from "./InfinityJoinTaveron";

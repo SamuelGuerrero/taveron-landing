@@ -6,7 +6,7 @@ import { Badge } from "~/components/molecules";
 
 export const JoinTaveron = () => {
   return (
-    <section className="relative h-[567px] w-full overflow-hidden bg-blue-darker">
+    <section className="bg-blue-darker relative h-[567px] w-full overflow-hidden">
       <Image
         src="/tarjetas/join-hero.svg"
         alt=""

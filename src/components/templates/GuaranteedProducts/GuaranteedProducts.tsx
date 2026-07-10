@@ -79,7 +79,7 @@ const row2: Product[] = [
 
 const ProductCard = ({ product }: { product: Product }) => (
   <div
-    className={`relative h-[357px] overflow-hidden rounded-[20px] bg-blue-darker ${
+    className={`bg-blue-darker relative h-[357px] overflow-hidden rounded-[20px] ${
       product.size === "wide" ? "w-[742px]" : "w-[559px]"
     }`}
   >

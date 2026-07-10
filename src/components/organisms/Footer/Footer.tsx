@@ -195,10 +195,7 @@ export const Footer = () => {
                 <InstagramIcon />
               </Link>
             </div>
-            <Text
-              size={12.59}
-              className="text-right leading-[140%] opacity-80"
-            >
+            <Text size={12.59} className="text-right leading-[140%] opacity-80">
               © {year} — TAVERON GROUP S.A.P.I DE C.V. All Rights Reserved
             </Text>
           </div>

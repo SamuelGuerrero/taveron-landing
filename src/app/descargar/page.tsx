@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function DescargarPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-10 bg-blue-darker px-6 py-24 text-center text-white">
+    <main className="bg-blue-darker flex min-h-screen flex-col items-center justify-center gap-10 px-6 py-24 text-center text-white">
       <DownloadRedirect />
 
       <Logo className="text-white" />

@@ -1,1 +1,1 @@
-export * from './GuaranteedAdvantages';
+export * from "./GuaranteedAdvantages";

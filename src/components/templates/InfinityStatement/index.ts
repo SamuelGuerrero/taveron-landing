@@ -1,1 +1,1 @@
-export * from './InfinityStatement';
+export * from "./InfinityStatement";

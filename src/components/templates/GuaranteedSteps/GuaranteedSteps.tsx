@@ -39,18 +39,18 @@ const steps: Step[] = [
 
 export const GuaranteedSteps = () => {
   return (
-    <section className="relative h-[1103px] w-full overflow-hidden bg-blue-darker text-white">
+    <section className="bg-blue-darker relative h-[1103px] w-full overflow-hidden text-white">
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[279px] left-[calc(50%-241.2px-341.8px)] h-[482.4px] w-[482.4px] rounded-full bg-blue-normal opacity-[0.59] blur-[90.4959px]"
+        className="bg-blue-normal pointer-events-none absolute top-[279px] left-[calc(50%-241.2px-341.8px)] h-[482.4px] w-[482.4px] rounded-full opacity-[0.59] blur-[90.4959px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[279px] left-[calc(50%-241.2px-10.1px)] h-[482.4px] w-[482.4px] rounded-full bg-blue-normal opacity-70 blur-[90.4959px]"
+        className="bg-blue-normal pointer-events-none absolute top-[279px] left-[calc(50%-241.2px-10.1px)] h-[482.4px] w-[482.4px] rounded-full opacity-70 blur-[90.4959px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[279px] left-[calc(50%-241.2px+341.8px)] h-[482.4px] w-[482.4px] rounded-full bg-blue-normal opacity-30 blur-[90.4959px]"
+        className="bg-blue-normal pointer-events-none absolute top-[279px] left-[calc(50%-241.2px+341.8px)] h-[482.4px] w-[482.4px] rounded-full opacity-30 blur-[90.4959px]"
       />
 
       <div className="absolute top-[118px] left-1/2 flex w-[975px] -translate-x-1/2 flex-col items-center gap-[50px]">

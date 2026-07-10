@@ -151,7 +151,7 @@ export const CardBenefits = () => {
           as="h2"
           weight="bold"
           size={48}
-          className="w-[652px] text-center leading-[58px] text-blue-darker"
+          className="text-blue-darker w-[652px] text-center leading-[58px]"
         >
           Tu tarjeta, con ventajas reales
         </Text>

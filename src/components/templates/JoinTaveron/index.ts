@@ -1,1 +1,1 @@
-export * from './JoinTaveron';
+export * from "./JoinTaveron";
