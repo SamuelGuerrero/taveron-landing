@@ -74,7 +74,7 @@ export const InfinityPrivileges = () => {
               width={341}
               height={595}
               priority
-              className="h-148.75 w-85.25 object-contain"
+              className="animate-breathe h-148.75 w-85.25 object-contain will-change-transform"
             />
           </div>
 
