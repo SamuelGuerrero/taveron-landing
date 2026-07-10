@@ -6,12 +6,7 @@ import Image from "next/image";
 const goldStroke = "#C4A35A";
 
 const BagIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    className="h-[30px] w-[30px]"
-    aria-hidden
-  >
+  <svg viewBox="0 0 24 24" fill="none" className="h-7.5 w-7.5" aria-hidden>
     <path
       d="M4 8h16l-1 12H5L4 8z"
       stroke={goldStroke}
@@ -28,12 +23,7 @@ const BagIcon = () => (
 );
 
 const ShieldIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    className="h-[30px] w-[30px]"
-    aria-hidden
-  >
+  <svg viewBox="0 0 24 24" fill="none" className="h-7.5 w-7.5" aria-hidden>
     <path
       d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"
       stroke={goldStroke}
@@ -51,12 +41,7 @@ const ShieldIcon = () => (
 );
 
 const CalendarIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    className="h-[30px] w-[30px]"
-    aria-hidden
-  >
+  <svg viewBox="0 0 24 24" fill="none" className="h-7.5 w-7.5" aria-hidden>
     <rect
       x="4"
       y="5"
@@ -76,12 +61,7 @@ const CalendarIcon = () => (
 );
 
 const DiamondIcon = () => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    className="h-[30px] w-[30px]"
-    aria-hidden
-  >
+  <svg viewBox="0 0 24 24" fill="none" className="h-7.5 w-7.5" aria-hidden>
     <path
       d="M6 3h12l4 6-10 12L2 9l4-6z"
       stroke={goldStroke}
@@ -169,20 +149,20 @@ export const InfinityBenefits = () => {
   const [expandedIndex, setExpandedIndex] = useState(0);
 
   return (
-    <section className="relative h-[975px] w-full overflow-hidden bg-black text-white">
-      <div className="absolute top-20 left-1/2 flex w-[558px] -translate-x-1/2 flex-col items-center gap-2.5">
+    <section className="relative h-243.75 w-full overflow-hidden bg-black text-white">
+      <div className="absolute top-20 left-1/2 flex w-139.5 -translate-x-1/2 flex-col items-center gap-2.5">
         <div className="inline-flex items-center justify-center rounded-[70px] border border-[#C4A35A] bg-[#C4A35A]/10 px-5 py-1.25">
           <span className="font-serif text-[16px] leading-6 font-bold tracking-[0.01em] text-[#C4A35A]">
             Nuestros Beneficios
           </span>
         </div>
-        <h2 className="w-[558px] text-center font-serif text-[48px] leading-[58px] font-bold text-[#C4A35A]">
+        <h2 className="w-139.5 text-center font-serif text-[48px] leading-[58px] font-bold text-[#C4A35A]">
           Tu tarjeta, <span className="text-white">con ventajas reales</span>
         </h2>
       </div>
 
-      <div className="absolute top-[232px] left-1/2 flex w-[1175px] -translate-x-1/2 items-start gap-5">
-        <div className="flex w-[587px] flex-col gap-5">
+      <div className="absolute top-58 left-1/2 flex w-293.75 -translate-x-1/2 items-start gap-5">
+        <div className="flex w-146.75 flex-col gap-5">
           {benefits.map((benefit, index) => {
             const isExpanded = index === expandedIndex;
             return (
@@ -191,10 +171,10 @@ export const InfinityBenefits = () => {
                 type="button"
                 onClick={() => setExpandedIndex(index)}
                 aria-expanded={isExpanded}
-                className="flex w-[587px] cursor-pointer items-center gap-2.5 rounded-[20px] border border-[#535353] bg-[#0F0F0F] px-5 py-[30px] text-left transition-colors duration-300 hover:border-[#C4A35A]/40"
+                className="flex w-146.75 cursor-pointer items-center gap-2.5 rounded-[20px] border border-[#535353] bg-[#0F0F0F] px-5 py-7.5 text-left transition-colors duration-300 hover:border-[#C4A35A]/40"
               >
                 <div className="flex flex-1 items-start gap-5">
-                  <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-[15px] bg-white/5">
+                  <div className="flex h-15 w-15 shrink-0 items-center justify-center rounded-[15px] bg-white/5">
                     {benefit.icon}
                   </div>
                   <div className="flex flex-col">
@@ -236,7 +216,7 @@ export const InfinityBenefits = () => {
           })}
         </div>
 
-        <div className="relative h-[664px] w-[568px] shrink-0">
+        <div className="relative h-166 w-142 shrink-0">
           <Image
             src="/tarjetas/infinity-benefits.svg"
             alt="Estilo de vida Infinity"
@@ -244,7 +224,7 @@ export const InfinityBenefits = () => {
             className="rounded-[17px] object-cover"
           />
 
-          <div className="absolute bottom-[64px] left-[74px] flex w-[420px] items-center gap-2 rounded-xl bg-black/40 p-3 backdrop-blur-md">
+          <div className="absolute bottom-16 left-18.5 flex w-105 items-center gap-2 rounded-xl bg-black/40 p-3 backdrop-blur-md">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white">
               <CreditScoreIcon />
             </div>

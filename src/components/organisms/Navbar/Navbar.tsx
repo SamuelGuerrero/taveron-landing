@@ -112,12 +112,12 @@ export const Navbar = () => {
       className="absolute inset-x-0 top-0 z-50"
       onMouseLeave={() => setShowCardsDropdown(false)}
     >
-      <header className="flex h-[90px] items-center justify-between px-[83px]">
+      <header className="flex h-22.5 items-center justify-between px-20.75">
         <Link href="/" aria-label="Taveron">
           <Logo className="text-white" />
         </Link>
 
-        <nav className="flex items-center gap-[30px]">
+        <nav className="flex items-center gap-7.5">
           {links.map((link) => {
             const isActive = link.href === activeHref;
             return (
@@ -132,7 +132,7 @@ export const Navbar = () => {
                     setShowCardsDropdown(false);
                   }
                 }}
-                className={`flex items-center gap-[5px] text-white ${isActive ? "" : "opacity-50"}`}
+                className={`flex items-center gap-1.25 text-white ${isActive ? "" : "opacity-50"}`}
               >
                 <Text weight={isActive ? "bold" : 400} size={16}>
                   {link.label}
@@ -151,7 +151,7 @@ export const Navbar = () => {
       </header>
 
       <div
-        className={`absolute inset-x-0 top-[90px] transition-[opacity,transform] duration-300 ease-out ${
+        className={`absolute inset-x-0 top-22.5 transition-[opacity,transform] duration-300 ease-out ${
           showCardsDropdown
             ? "translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2 opacity-0"
@@ -160,15 +160,15 @@ export const Navbar = () => {
         <div className="relative bg-white shadow-[0_24px_60px_rgba(0,30,57,0.18)]">
           <div
             style={{ left: arrowLeft }}
-            className="absolute -top-[8px] h-[17px] w-[17px] -translate-x-1/2 rotate-45 rounded-tl-[5px] border-t border-l border-black/[0.06] bg-white"
+            className="absolute -top-2 h-4.25 w-4.25 -translate-x-1/2 rotate-45 rounded-tl-[5px] border-t border-l border-black/[0.06] bg-white"
           />
-          <div className="mx-auto flex max-w-[1162px] justify-center gap-6 px-[83px] py-10">
+          <div className="mx-auto flex max-w-290.5 justify-center gap-6 px-20.75 py-10">
             {cardOptions.map((card) => (
               <Link
                 key={card.label}
                 href={card.href}
                 onClick={() => setShowCardsDropdown(false)}
-                className="group hover:ring-blue-normal/30 flex w-[168px] flex-col items-center gap-4 rounded-[20px] bg-gradient-to-br from-[#F7F8FA] to-[#EDF0F5] px-4 pt-7 pb-5 ring-1 ring-black/[0.04] transition-all duration-300 hover:-translate-y-1 hover:from-white hover:to-[#F2F5FA] hover:shadow-[0_16px_32px_rgba(0,30,57,0.12)]"
+                className="group hover:ring-blue-normal/30 flex w-42 flex-col items-center gap-4 rounded-[20px] bg-gradient-to-br from-[#F7F8FA] to-[#EDF0F5] px-4 pt-7 pb-5 ring-1 ring-black/[0.04] transition-all duration-300 hover:-translate-y-1 hover:from-white hover:to-[#F2F5FA] hover:shadow-[0_16px_32px_rgba(0,30,57,0.12)]"
               >
                 <div className="drop-shadow-[0_10px_18px_rgba(0,30,57,0.18)] transition-transform duration-300 group-hover:scale-[1.04]">
                   <Image
@@ -176,7 +176,7 @@ export const Navbar = () => {
                     alt={card.alt}
                     width={94}
                     height={152}
-                    className="h-[136px] w-[84px] rounded-[8px]"
+                    className="h-34 w-21 rounded-[8px]"
                   />
                 </div>
                 <Text

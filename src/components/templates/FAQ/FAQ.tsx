@@ -76,21 +76,21 @@ export const FAQ = () => {
   };
 
   return (
-    <section className="w-full bg-[#E6EEF6] py-[65px]">
-      <div className="mx-auto flex w-[812px] flex-col items-center gap-10">
+    <section className="w-full bg-[#E6EEF6] py-16.25">
+      <div className="mx-auto flex w-203 flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-5">
           <Badge variant="outline">¿Necesitas más ayuda?</Badge>
           <Text
             as="h2"
             weight="bold"
             size={60}
-            className="text-blue-darker w-[591px] text-center leading-[73px]"
+            className="text-blue-darker w-147.75 text-center leading-[73px]"
           >
             Preguntas frecuentes
           </Text>
         </div>
 
-        <div className="flex w-[812px] flex-col gap-[22px]">
+        <div className="flex w-203 flex-col gap-5.5">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
@@ -99,7 +99,7 @@ export const FAQ = () => {
                 type="button"
                 onClick={() => toggle(index)}
                 aria-expanded={isOpen}
-                className="w-[812px] cursor-pointer rounded-[20px] bg-white px-[30px] py-3 text-left transition-shadow duration-300 hover:shadow-md"
+                className="w-203 cursor-pointer rounded-[20px] bg-white px-7.5 py-3 text-left transition-shadow duration-300 hover:shadow-md"
               >
                 <div className="flex items-center gap-4">
                   <Text

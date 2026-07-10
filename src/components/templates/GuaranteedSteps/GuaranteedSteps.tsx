@@ -39,34 +39,34 @@ const steps: Step[] = [
 
 export const GuaranteedSteps = () => {
   return (
-    <section className="bg-blue-darker relative h-[1103px] w-full overflow-hidden text-white">
+    <section className="bg-blue-darker relative h-275.75 w-full overflow-hidden text-white">
       <div
         aria-hidden
-        className="bg-blue-normal pointer-events-none absolute top-[279px] left-[calc(50%-241.2px-341.8px)] h-[482.4px] w-[482.4px] rounded-full opacity-[0.59] blur-[90.4959px]"
+        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px-341.8px)] rounded-full opacity-[0.59] blur-[90.4959px]"
       />
       <div
         aria-hidden
-        className="bg-blue-normal pointer-events-none absolute top-[279px] left-[calc(50%-241.2px-10.1px)] h-[482.4px] w-[482.4px] rounded-full opacity-70 blur-[90.4959px]"
+        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px-10.1px)] rounded-full opacity-70 blur-[90.4959px]"
       />
       <div
         aria-hidden
-        className="bg-blue-normal pointer-events-none absolute top-[279px] left-[calc(50%-241.2px+341.8px)] h-[482.4px] w-[482.4px] rounded-full opacity-30 blur-[90.4959px]"
+        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px+341.8px)] rounded-full opacity-30 blur-[90.4959px]"
       />
 
-      <div className="absolute top-[118px] left-1/2 flex w-[975px] -translate-x-1/2 flex-col items-center gap-[50px]">
+      <div className="absolute top-29.5 left-1/2 flex w-243.75 -translate-x-1/2 flex-col items-center gap-12.5">
         <div className="flex flex-col items-center gap-5">
           <Badge>Proceso simple</Badge>
           <Text
             as="h2"
             weight="bold"
             size={48}
-            className="w-[905px] text-center leading-[58px]"
+            className="w-226.25 text-center leading-[58px]"
           >
             ¿Cómo funciona?
           </Text>
         </div>
 
-        <div className="flex w-[975px] items-center gap-[62px]">
+        <div className="flex w-243.75 items-center gap-15.5">
           <div className="flex-shrink-0">
             <Image
               src="/hero/guaranteed.svg"
@@ -74,7 +74,7 @@ export const GuaranteedSteps = () => {
               width={363}
               height={595}
               priority
-              className="h-[595px] w-[363px] object-contain"
+              className="h-148.75 w-90.75 object-contain"
             />
           </div>
 

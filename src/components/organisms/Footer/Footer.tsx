@@ -90,10 +90,10 @@ export const Footer = () => {
     <footer
       className={`w-full text-white ${isInfinityPage ? "bg-black" : "bg-blue-darker"}`}
     >
-      <div className="mx-auto flex max-w-[1512px] flex-col px-[68px] pt-[63px] pb-10">
-        <div className="flex items-start gap-[140px]">
-          <div className="flex w-[163px] flex-col gap-10">
-            <Logo className="h-5 w-[134px] text-white" />
+      <div className="mx-auto flex max-w-378 flex-col px-17 pt-15.75 pb-10">
+        <div className="flex items-start gap-35">
+          <div className="flex w-40.75 flex-col gap-10">
+            <Logo className="h-5 w-33.5 text-white" />
             <div className="flex flex-col gap-5">
               <Link href="#" aria-label="Descargar en App Store">
                 <Image
@@ -114,7 +114,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-1 gap-[60px]">
+          <div className="flex flex-1 gap-15">
             {linkGroups.map((group) => (
               <div key={group.title} className="flex flex-col gap-8">
                 <Text weight={500} size={14.69} className="leading-[140%]">
@@ -151,7 +151,7 @@ export const Footer = () => {
           />
         </div>
 
-        <ul className="mt-[30px] flex flex-wrap items-center gap-5">
+        <ul className="mt-7.5 flex flex-wrap items-center gap-5">
           {regulators.map((r) => (
             <li key={r.name}>
               <Image
@@ -164,8 +164,8 @@ export const Footer = () => {
           ))}
         </ul>
 
-        <div className="mt-[30px] flex items-end justify-between gap-8">
-          <div className="flex flex-col gap-[5px] opacity-75">
+        <div className="mt-7.5 flex items-end justify-between gap-8">
+          <div className="flex flex-col gap-1.25 opacity-75">
             <Text size={14.84} className="leading-[140%]">
               Contácto: <span className="font-bold">800 967 5003</span>
             </Text>
@@ -183,14 +183,14 @@ export const Footer = () => {
               <Link
                 href="#"
                 aria-label="Facebook"
-                className="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-white/[0.125] transition-colors hover:bg-white/10"
+                className="flex h-13 w-13 items-center justify-center rounded-full border border-white/12.5 transition-colors hover:bg-white/10"
               >
                 <FacebookIcon />
               </Link>
               <Link
                 href="#"
                 aria-label="Instagram"
-                className="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-white/[0.125] transition-colors hover:bg-white/10"
+                className="flex h-13 w-13 items-center justify-center rounded-full border border-white/12.5 transition-colors hover:bg-white/10"
               >
                 <InstagramIcon />
               </Link>

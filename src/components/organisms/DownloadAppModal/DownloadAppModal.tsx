@@ -56,7 +56,7 @@ export const DownloadAppModal = ({
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex items-center justify-center p-4 transition-opacity duration-300 ${
+      className={`fixed inset-0 z-100 flex items-center justify-center p-4 transition-opacity duration-300 ${
         isOpen ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
       aria-hidden={!isOpen}
@@ -70,7 +70,7 @@ export const DownloadAppModal = ({
         role="dialog"
         aria-modal="true"
         aria-label="Descarga la app de Taveron"
-        className={`relative z-10 flex w-full max-w-[440px] flex-col items-center rounded-[28px] bg-white px-10 py-12 text-center shadow-[0_24px_80px_rgba(0,30,57,0.35)] transition-transform duration-300 ${
+        className={`relative z-10 flex w-full max-w-110 flex-col items-center rounded-[28px] bg-white px-10 py-12 text-center shadow-[0_24px_80px_rgba(0,30,57,0.35)] transition-transform duration-300 ${
           isOpen ? "scale-100" : "scale-95"
         }`}
       >
@@ -96,7 +96,7 @@ export const DownloadAppModal = ({
           Escanea el código QR para descargar la app
         </Text>
 
-        <div className="mt-8 rounded-[20px] border border-black/[0.06] bg-white p-4 shadow-[0_8px_24px_rgba(0,30,57,0.08)]">
+        <div className="mt-8 rounded-[20px] border border-black/6 bg-white p-4 shadow-[0_8px_24px_rgba(0,30,57,0.08)]">
           <QRCodeSVG value={downloadUrl} size={196} level="M" marginSize={0} />
         </div>
 

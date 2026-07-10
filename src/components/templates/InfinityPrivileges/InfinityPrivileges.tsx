@@ -36,38 +36,38 @@ const steps: Step[] = [
 
 export const InfinityPrivileges = () => {
   return (
-    <section className="relative h-[1103px] w-full overflow-hidden bg-black text-white">
+    <section className="relative h-275.75 w-full overflow-hidden bg-black text-white">
       <div
         aria-hidden
-        className="pointer-events-none absolute h-[306px] w-[306px] rounded-full bg-[#C4A35A] opacity-[0.35] blur-[68.4539px]"
+        className="pointer-events-none absolute h-76.5 w-76.5 rounded-full bg-[#C4A35A] opacity-[0.35] blur-[68.4539px]"
         style={{ left: "calc(50% - 153px - 288px - 71px)", top: 342 }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute h-[306px] w-[306px] rounded-full bg-[#C4A35A] opacity-40 blur-[68.4539px]"
+        className="pointer-events-none absolute h-76.5 w-76.5 rounded-full bg-[#C4A35A] opacity-40 blur-[68.4539px]"
         style={{ left: "calc(50% - 153px - 77px - 71px)", top: 342 }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute h-[306px] w-[306px] rounded-full bg-[#C4A35A] opacity-[0.18] blur-[68.4539px]"
+        className="pointer-events-none absolute h-76.5 w-76.5 rounded-full bg-[#C4A35A] opacity-[0.18] blur-[68.4539px]"
         style={{ left: "calc(50% - 153px + 146px - 71px)", top: 342 }}
       />
 
-      <div className="absolute top-1/2 left-1/2 flex w-[975px] -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-[50px]">
+      <div className="absolute top-1/2 left-1/2 flex w-243.75 -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-12.5">
         <div className="flex flex-col items-center gap-5">
           <div className="inline-flex items-center justify-center rounded-[70px] border border-[#C4A35A] bg-[#C4A35A]/10 px-5 py-1.25">
             <span className="font-serif text-[16px] leading-6 font-bold tracking-[0.01em] text-[#C4A35A]">
               Privilegios
             </span>
           </div>
-          <h2 className="w-[566px] text-center font-serif text-[48px] leading-[58px] font-bold text-[#C4A35A]">
+          <h2 className="w-141.5 text-center font-serif text-[48px] leading-[58px] font-bold text-[#C4A35A]">
             Cada beneficio,
             <br />
             cuidadosamente seleccionado.
           </h2>
         </div>
 
-        <div className="flex w-[975px] items-center gap-[62px]">
+        <div className="flex w-243.75 items-center gap-15.5">
           <div className="flex-shrink-0">
             <Image
               src="/tarjetas/infinity-vertical.svg"
@@ -75,7 +75,7 @@ export const InfinityPrivileges = () => {
               width={341}
               height={595}
               priority
-              className="h-[595px] w-[341px] object-contain"
+              className="h-148.75 w-85.25 object-contain"
             />
           </div>
 
@@ -110,7 +110,7 @@ export const InfinityPrivileges = () => {
 
       <div
         aria-hidden
-        className="pointer-events-none absolute h-[304px] w-[304px] rounded-full bg-[#C4A35A] opacity-65 blur-[72px]"
+        className="pointer-events-none absolute h-76 w-76 rounded-full bg-[#C4A35A] opacity-65 blur-[72px]"
         style={{ left: 1341, top: -215 }}
       />
     </section>

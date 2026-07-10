@@ -24,18 +24,18 @@ const ChevronRight = ({ className }: { className?: string }) => (
 
 export const DownloadApp = () => {
   return (
-    <section className="bg-blue-darker relative h-[966px] w-full overflow-hidden">
+    <section className="bg-blue-darker relative h-241.5 w-full overflow-hidden">
       <div
         aria-hidden
-        className="bg-blue-normal pointer-events-none absolute top-[416px] left-[calc(50%-241.2px-341.8px)] h-[482.4px] w-[482.4px] rounded-full opacity-[0.59] blur-[90.4959px]"
+        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-104 left-[calc(50%-241.2px-341.8px)] rounded-full opacity-[0.59] blur-[90.4959px]"
       />
       <div
         aria-hidden
-        className="bg-blue-normal pointer-events-none absolute top-[416px] left-[calc(50%-241.2px-10.1px)] h-[482.4px] w-[482.4px] rounded-full opacity-70 blur-[90.4959px]"
+        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-104 left-[calc(50%-241.2px-10.1px)] rounded-full opacity-70 blur-[90.4959px]"
       />
       <div
         aria-hidden
-        className="bg-blue-normal pointer-events-none absolute top-[416px] left-[calc(50%-241.2px+341.8px)] h-[482.4px] w-[482.4px] rounded-full opacity-30 blur-[90.4959px]"
+        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-104 left-[calc(50%-241.2px+341.8px)] rounded-full opacity-30 blur-[90.4959px]"
       />
 
       <Image
@@ -47,18 +47,18 @@ export const DownloadApp = () => {
         className="pointer-events-none absolute top-1/2 left-1/2 h-auto w-full max-w-none -translate-x-1/2 -translate-y-1/2 select-none"
       />
 
-      <div className="absolute top-1/2 left-1/2 flex w-[1047px] -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-10 text-white">
-        <div className="flex w-[1047px] flex-col items-center gap-5">
+      <div className="absolute top-1/2 left-1/2 flex w-261.75 -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-10 text-white">
+        <div className="flex w-261.75 flex-col items-center gap-5">
           <Text
             as="h2"
             weight="bold"
             size={48}
-            className="w-[1047px] text-center leading-[58px]"
+            className="w-261.75 text-center leading-[58px]"
           >
             Transformamos la manera en que usas tu dinero
           </Text>
 
-          <Text size={18} className="w-[827px] text-center leading-6">
+          <Text size={18} className="w-206.75 text-center leading-6">
             Con Taveron puedes dar el primer paso hacia un mejor control
             financiero, de forma segura y acompañada. Descarga la app y conoce
             tu tarjeta garantizada.
@@ -66,7 +66,7 @@ export const DownloadApp = () => {
         </div>
 
         <DownloadCtaButton
-          className="w-[234px]!"
+          className="w-58.5!"
           rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
         >
           Descargar ahora

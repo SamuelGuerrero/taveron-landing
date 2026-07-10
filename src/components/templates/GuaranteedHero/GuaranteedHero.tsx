@@ -7,7 +7,7 @@ import { Badge } from "~/components/molecules";
 export const GuaranteedHero = () => {
   return (
     <div className="relative w-full">
-      <section className="bg-blue-darker relative h-[963px] w-full overflow-hidden text-white">
+      <section className="bg-blue-darker relative h-240.75 w-full overflow-hidden text-white">
         <Image
           src="/tarjetas/garantizada-hero.svg"
           alt=""
@@ -17,20 +17,20 @@ export const GuaranteedHero = () => {
           aria-hidden
         />
 
-        <div className="absolute top-[170px] left-1/2 flex w-[834px] -translate-x-1/2 flex-col items-center gap-10">
-          <div className="flex w-[834px] flex-col items-center gap-5">
+        <div className="absolute top-42.5 left-1/2 flex w-208.5 -translate-x-1/2 flex-col items-center gap-10">
+          <div className="flex w-208.5 flex-col items-center gap-5">
             <Badge>✦ Tarjeta Garantizada</Badge>
 
             <Text
               as="h1"
               weight="bold"
               size={72}
-              className="w-[834px] text-center leading-[82px]"
+              className="w-208.5 text-center leading-[82px]"
             >
               Tu puerta al crédito empieza aquí
             </Text>
 
-            <Text size={24} className="w-[802px] text-center leading-8">
+            <Text size={24} className="w-200.5 text-center leading-8">
               La tarjeta garantizada Taveron te permite acceder a crédito
               dejando un depósito como respaldo. Ideal para iniciar o
               reconstruir tu historial.
@@ -58,11 +58,11 @@ export const GuaranteedHero = () => {
         </div>
       </section>
 
-      <section className="flex h-[652px] w-full items-center justify-center bg-[#EDEDED]">
+      <section className="flex h-163 w-full items-center justify-center bg-[#EDEDED]">
         <Text
           weight="bold"
           size={54.155}
-          className="w-[1179px] text-center leading-[66px] text-[#003462]"
+          className="w-294.75 text-center leading-[66px] text-[#003462]"
         >
           Con Taveron puedes dar el primer paso hacia un mejor control
           financiero, de forma segura y acompañada.{" "}
@@ -85,7 +85,7 @@ export const GuaranteedHero = () => {
         width={523}
         height={523}
         priority
-        className="pointer-events-none absolute top-[620px] left-1/2 z-10 h-[523px] w-[523px] max-w-none -translate-x-1/2 select-none"
+        className="pointer-events-none absolute top-155 left-1/2 z-10 h-130.75 w-130.75 max-w-none -translate-x-1/2 select-none"
       />
     </div>
   );

@@ -6,7 +6,7 @@ import { Badge } from "~/components/molecules";
 
 export const ClassicHero = () => {
   return (
-    <section className="bg-blue-darker relative h-[900px] w-full overflow-hidden text-white">
+    <section className="bg-blue-darker relative h-225 w-full overflow-hidden text-white">
       <Image
         src="/tarjetas/clasica-hero.svg"
         alt=""
@@ -22,10 +22,10 @@ export const ClassicHero = () => {
         width={651}
         height={651}
         priority
-        className="pointer-events-none absolute top-[101px] left-[calc(50%+73px)] h-[651px] w-[651px] max-w-none select-none"
+        className="pointer-events-none absolute top-25.25 left-[calc(50%+73px)] h-162.75 w-162.75 max-w-none select-none"
       />
 
-      <div className="absolute top-[197px] left-[115px] flex w-[681px] flex-col gap-15">
+      <div className="absolute top-49.25 left-28.75 flex w-170.25 flex-col gap-15">
         <div className="flex flex-col gap-5">
           <Badge>Tarjeta Clásica</Badge>
 
@@ -33,7 +33,7 @@ export const ClassicHero = () => {
             Diseñada para empezar y seguir creciendo
           </Text>
 
-          <Text size={24} className="w-[570px] leading-8">
+          <Text size={24} className="w-142.5 leading-8">
             Utiliza tu tarjeta Clásica Taveron en millones de comercios y
             cajeros alrededor del mundo.
           </Text>

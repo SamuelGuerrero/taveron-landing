@@ -4,7 +4,7 @@ import { Text } from "~/components/atoms";
 
 export const CardsShowcase = () => {
   return (
-    <section className="relative h-[1040px] w-full overflow-hidden bg-white">
+    <section className="relative h-260 w-full overflow-hidden bg-white">
       <div className="absolute inset-0">
         <Image
           src="/Taveron-cards-collection.svg"
@@ -14,13 +14,13 @@ export const CardsShowcase = () => {
         />
       </div>
 
-      <div className="absolute top-[54px] left-1/2 flex w-[859px] -translate-x-1/2 flex-col items-center gap-10">
-        <div className="flex w-[859px] flex-col items-center gap-5">
+      <div className="absolute top-13.5 left-1/2 flex w-214.75 -translate-x-1/2 flex-col items-center gap-10">
+        <div className="flex w-214.75 flex-col items-center gap-5">
           <Text
             as="h2"
             weight="bold"
             size={60}
-            className="w-[732px] text-center leading-[73px] text-[#003462]"
+            className="w-183 text-center leading-[73px] text-[#003462]"
           >
             Taveron impulsa tu
             <br />
@@ -38,7 +38,7 @@ export const CardsShowcase = () => {
 
           <Text
             size={20}
-            className="w-[859px] text-center leading-7 text-[#0F0F0F]"
+            className="w-214.75 text-center leading-7 text-[#0F0F0F]"
           >
             Elige la que mejor se adapte a tus necesidades y disfruta de
             seguridad, recompensas y control total.

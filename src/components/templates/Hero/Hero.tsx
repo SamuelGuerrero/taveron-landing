@@ -74,7 +74,7 @@ const slides: HeroSlide[] = [
       alt: "Tarjeta Clásica Taveron",
       width: 651,
       height: 651,
-      className: "top-[101px] left-[calc(50%+73px)] h-[651px] w-[651px]",
+      className: "top-25.25 left-[calc(50%+73px)] h-162.75 w-162.75",
     },
   },
   {
@@ -88,7 +88,7 @@ const slides: HeroSlide[] = [
       alt: "Tarjeta Garantizada Taveron",
       width: 749,
       height: 709,
-      className: "top-[86px] left-[calc(50%-34px)] h-[709px] w-[749px]",
+      className: "top-21.5 left-[calc(50%-34px)] h-177.25 w-187.25",
     },
   },
 ];
@@ -192,7 +192,7 @@ export const Hero = () => {
         </div>
       ))}
 
-      <div className="bg-blue-darker/50 absolute bottom-[97.5px] left-1/2 flex h-11.25 -translate-x-1/2 items-center gap-2.5 rounded-[40px] px-6.25">
+      <div className="bg-blue-darker/50 bottom-24.375 absolute left-1/2 flex h-11.25 -translate-x-1/2 items-center gap-2.5 rounded-[40px] px-6.25">
         {slides.map((_, index) => {
           const isActive = index === currentIndex;
           return (

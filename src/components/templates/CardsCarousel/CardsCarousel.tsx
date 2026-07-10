@@ -177,46 +177,43 @@ export const CardsCarousel = () => {
   };
 
   return (
-    <section className="relative h-[1040px] w-full overflow-hidden bg-[#0F0F0F] text-white">
+    <section className="relative h-260 w-full overflow-hidden bg-[#0F0F0F] text-white">
       {/* <div
         aria-hidden
-        className="pointer-events-none absolute top-[327px] left-[calc(50%-329px-329px)] h-[658px] w-[658px] rounded-full bg-[#2E2E2E] blur-[123.439px]"
+        className="pointer-events-none absolute top-81.75 left-[calc(50%-329px-329px)] h-164.5 w-164.5 rounded-full bg-[#2E2E2E] blur-[123.439px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[327px] left-[calc(50%-329px+123.45px)] h-[658px] w-[658px] rounded-full bg-[#2E2E2E] opacity-70 blur-[123.439px]"
+        className="pointer-events-none absolute top-81.75 left-[calc(50%-329px+123.45px)] h-164.5 w-164.5 rounded-full bg-[#2E2E2E] opacity-70 blur-[123.439px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-[327px] left-[calc(50%-329px+603.45px)] h-[658px] w-[658px] rounded-full bg-[#2E2E2E] opacity-30 blur-[123.439px]"
+        className="pointer-events-none absolute top-81.75 left-[calc(50%-329px+603.45px)] h-164.5 w-164.5 rounded-full bg-[#2E2E2E] opacity-30 blur-[123.439px]"
       /> */}
 
-      <div className="absolute top-[128px] left-1/2 flex w-[1162px] -translate-x-1/2 flex-col items-center gap-10">
+      <div className="absolute top-32 left-1/2 flex w-290.5 -translate-x-1/2 flex-col items-center gap-10">
         <Badge>Tarjetas de crédito</Badge>
 
-        <div className="flex w-[1162px] flex-col items-center gap-5">
+        <div className="flex w-290.5 flex-col items-center gap-5">
           <Text
             as="h2"
             weight="bold"
             size={48}
-            className="w-[1162px] text-center leading-[58px] text-white"
+            className="w-290.5 text-center leading-[58px] text-white"
           >
             Tarjetas que se adaptan a tu forma de vivir y trabajar
           </Text>
 
-          <Text
-            size={18}
-            className="w-[807px] text-center leading-6 text-white"
-          >
+          <Text size={18} className="w-201.75 text-center leading-6 text-white">
             En Taveron diseñamos soluciones que acompañan tus decisiones con
             flexibilidad, claridad y respaldo.
           </Text>
         </div>
       </div>
 
-      <div className="absolute top-[319px] left-1/2 h-[592px] w-[1408px] -translate-x-1/2">
+      <div className="absolute top-79.75 left-1/2 h-148 w-352 -translate-x-1/2">
         <span
-          className="absolute top-[52px] left-1/2 z-20 -translate-x-1/2 bg-clip-text text-[36px] leading-10 font-bold text-transparent transition-opacity duration-300"
+          className="absolute top-13 left-1/2 z-20 -translate-x-1/2 bg-clip-text text-[36px] leading-10 font-bold text-transparent transition-opacity duration-300"
           style={{
             backgroundImage:
               "linear-gradient(180deg, #FFFFFF 20%, rgba(255,255,255,0) 130%)",
@@ -266,7 +263,7 @@ export const CardsCarousel = () => {
                   height={card.height}
                   priority={i === 0}
                   draggable={false}
-                  className="pointer-events-none h-auto w-[440px] select-none"
+                  className="pointer-events-none h-auto w-110 select-none"
                 />
               </div>
             );
@@ -274,7 +271,7 @@ export const CardsCarousel = () => {
         </div>
       </div>
 
-      <div className="absolute top-[615px] left-1/2 z-30 flex w-[920px] -translate-x-1/2 -translate-y-1/2 justify-between">
+      <div className="absolute top-153.75 left-1/2 z-30 flex w-230 -translate-x-1/2 -translate-y-1/2 justify-between">
         <button
           type="button"
           aria-label="Anterior"
@@ -294,9 +291,9 @@ export const CardsCarousel = () => {
         </button>
       </div>
 
-      <div className="absolute bottom-[70px] left-1/2 -translate-x-1/2">
+      <div className="absolute bottom-17.5 left-1/2 -translate-x-1/2">
         <DownloadCtaButton
-          className="border-blue-normal w-[200px]! border"
+          className="border-blue-normal w-50! border"
           rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
         >
           Solicitar tarjeta

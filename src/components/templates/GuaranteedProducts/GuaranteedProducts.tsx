@@ -30,7 +30,7 @@ const row1: Product[] = [
       alt: "Tarjetas Taveron",
       width: 280,
       height: 252,
-      className: "absolute top-[47px] right-[57px] h-[252px] w-[280px]",
+      className: "absolute top-11.75 right-14.25 h-63 w-70",
     },
   },
   {
@@ -43,7 +43,7 @@ const row1: Product[] = [
       alt: "Terminal Taveron Pay",
       width: 114,
       height: 287,
-      className: "absolute top-[40px] right-[76px] h-[287px] w-[114px]",
+      className: "absolute top-10 right-19 h-71.75 w-28.5",
     },
   },
 ];
@@ -59,7 +59,7 @@ const row2: Product[] = [
       alt: "App Taveron Móvil",
       width: 186,
       height: 383,
-      className: "absolute -bottom-[26px] right-[66px] h-[383px] w-[186px]",
+      className: "absolute -bottom-6.5 right-16.5 h-95.75 w-46.5",
     },
   },
   {
@@ -72,20 +72,20 @@ const row2: Product[] = [
       alt: "Remesas Taveron",
       width: 321,
       height: 214,
-      className: "absolute top-[70px] right-[40px] h-[214px] w-[321px]",
+      className: "absolute top-17.5 right-10 h-53.5 w-80.25",
     },
   },
 ];
 
 const ProductCard = ({ product }: { product: Product }) => (
   <div
-    className={`bg-blue-darker relative h-[357px] overflow-hidden rounded-[20px] ${
-      product.size === "wide" ? "w-[742px]" : "w-[559px]"
+    className={`bg-blue-darker relative h-89.25 overflow-hidden rounded-[20px] ${
+      product.size === "wide" ? "w-185.5" : "w-139.75"
     }`}
   >
     <div
-      className={`absolute top-[61px] left-[40px] flex flex-col gap-5 ${
-        product.size === "wide" ? "w-[322px]" : "w-[275px]"
+      className={`absolute top-15.25 left-10 flex flex-col gap-5 ${
+        product.size === "wide" ? "w-80.5" : "w-68.75"
       }`}
     >
       <Text weight="bold" size={30} className="leading-9 text-white">
@@ -107,15 +107,15 @@ const ProductCard = ({ product }: { product: Product }) => (
 
 export const GuaranteedProducts = () => {
   return (
-    <section className="w-full bg-[#002749] py-[60px]">
-      <div className="mx-auto flex w-[1321px] flex-col items-center gap-10">
+    <section className="w-full bg-[#002749] py-15">
+      <div className="mx-auto flex w-330.25 flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-2.5">
           <Badge variant="outline-white">Nuestros beneficios</Badge>
           <Text
             as="h2"
             weight="bold"
             size={48}
-            className="w-[760px] text-center leading-[58px] text-white"
+            className="w-190 text-center leading-[58px] text-white"
           >
             Con tu tarjeta garantizada, también puedes aprovechar
           </Text>

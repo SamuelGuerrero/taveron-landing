@@ -25,7 +25,7 @@ export const InfinityHero = () => {
   const [email, setEmail] = useState("");
 
   return (
-    <section className="relative h-[989px] w-full overflow-hidden bg-black text-white">
+    <section className="relative h-247.25 w-full overflow-hidden bg-black text-white">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
@@ -43,7 +43,7 @@ export const InfinityHero = () => {
         }}
       />
 
-      <div className="absolute top-[228px] left-1/2 flex w-[1121px] -translate-x-1/2 flex-col items-center gap-10">
+      <div className="absolute top-57 left-1/2 flex w-280.25 -translate-x-1/2 flex-col items-center gap-10">
         <div className="inline-flex items-center justify-center rounded-[70px] border border-[#C4A35A] bg-[#C4A35A]/10 px-5 py-1.25">
           <span className="font-serif text-[16px] leading-6 font-bold tracking-[0.01em] text-[#C4A35A]">
             Tarjeta Infiniti
@@ -58,18 +58,18 @@ export const InfinityHero = () => {
           para tu forma de vivir
         </h1>
 
-        <p className="w-[606px] text-center font-serif text-[24px] leading-8 font-normal text-white">
+        <p className="w-151.5 text-center font-serif text-[24px] leading-8 font-normal text-white">
           Diseñada para quienes se mueven con criterio, viajan con respaldo y
           consumen con inteligencia.
         </p>
 
         <form
-          className="relative flex h-[70px] w-[543px] items-center rounded-[15px] border border-[#C4A35A] bg-[#0F0F0F] p-[5px]"
+          className="relative flex h-17.5 w-135.75 items-center rounded-[15px] border border-[#C4A35A] bg-[#0F0F0F] p-1.25"
           onSubmit={(e) => e.preventDefault()}
         >
           <label
             htmlFor="infinity-email"
-            className="flex h-full flex-1 flex-col justify-center pl-[14px]"
+            className="flex h-full flex-1 flex-col justify-center pl-3.5"
           >
             <span className="text-xs font-bold text-[#60656A]">
               Correo electrónico
@@ -85,7 +85,7 @@ export const InfinityHero = () => {
           </label>
           <button
             type="submit"
-            className="flex h-[60px] w-[196px] shrink-0 cursor-pointer items-center justify-center gap-1 rounded-[15px] bg-[#C4A35A] text-white transition-opacity hover:opacity-90"
+            className="flex h-15 w-49 shrink-0 cursor-pointer items-center justify-center gap-1 rounded-[15px] bg-[#C4A35A] text-white transition-opacity hover:opacity-90"
           >
             <span className="text-sm font-bold">Solicitar invitación</span>
             <ChevronRight className="h-5 w-5" />
@@ -93,11 +93,11 @@ export const InfinityHero = () => {
         </form>
       </div>
 
-      <div className="absolute bottom-[90px] left-1/2 flex -translate-x-1/2 flex-col items-center gap-3">
+      <div className="absolute bottom-22.5 left-1/2 flex -translate-x-1/2 flex-col items-center gap-3">
         <span className="font-serif text-sm font-semibold text-[#C4A35A] italic">
           Scroll down
         </span>
-        <div className="h-[66px] w-px bg-[#C4A35A]" />
+        <div className="h-16.5 w-px bg-[#C4A35A]" />
       </div>
     </section>
   );

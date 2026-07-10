@@ -68,30 +68,30 @@ export const InfinityFAQ = () => {
   };
 
   return (
-    <section className="relative h-[875px] w-full bg-black text-white">
+    <section className="relative h-218.75 w-full bg-black text-white">
       <div
         aria-hidden
-        className="pointer-events-none absolute z-50 h-[334px] w-[334px] rounded-full bg-[#C4A35A] opacity-20 blur-[128px]"
+        className="pointer-events-none absolute z-50 h-83.5 w-83.5 rounded-full bg-[#C4A35A] opacity-20 blur-[128px]"
         style={{ left: -87, top: 592 }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute h-[515px] w-[515px] rounded-full bg-[#C4A35A] opacity-20 blur-[150px]"
+        className="pointer-events-none absolute h-128.75 w-128.75 rounded-full bg-[#C4A35A] opacity-20 blur-[150px]"
         style={{ right: -178, top: 94 }}
       />
 
-      <div className="absolute top-[85px] left-1/2 flex w-[800px] -translate-x-1/2 flex-col items-center">
-        <div className="inline-flex h-[34px] items-center justify-center rounded-[70px] border border-[#C4A35A] bg-[#C4A35A]/10 px-5">
+      <div className="absolute top-21.25 left-1/2 flex w-200 -translate-x-1/2 flex-col items-center">
+        <div className="inline-flex h-8.5 items-center justify-center rounded-[70px] border border-[#C4A35A] bg-[#C4A35A]/10 px-5">
           <span className="font-serif text-[16px] leading-6 font-bold tracking-[0.01em] text-[#C4A35A]">
             ¿Necesitas más ayuda?
           </span>
         </div>
 
-        <h2 className="mt-[26px] text-center font-serif text-[48px] leading-[58px] font-bold text-[#C4A35A]">
+        <h2 className="mt-6.5 text-center font-serif text-[48px] leading-14.5 font-bold text-[#C4A35A]">
           Preguntas frecuentes
         </h2>
 
-        <div className="mt-[48px] flex w-[812px] flex-col gap-[22px]">
+        <div className="mt-12 flex w-203 flex-col gap-5.5">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
 
@@ -101,7 +101,7 @@ export const InfinityFAQ = () => {
                 type="button"
                 onClick={() => toggle(index)}
                 aria-expanded={isOpen}
-                className="group relative w-[812px] cursor-pointer overflow-hidden rounded-[10px] border border-[#C4A35A]/90 bg-black px-[30px] py-[19px] text-left transition-colors duration-300 hover:border-[#C4A35A]"
+                className="group relative w-203 cursor-pointer overflow-hidden rounded-[10px] border border-[#C4A35A]/90 bg-black px-7.5 py-4.75 text-left transition-colors duration-300 hover:border-[#C4A35A]"
               >
                 <span
                   aria-hidden
@@ -124,7 +124,7 @@ export const InfinityFAQ = () => {
                   }`}
                 >
                   <div className="min-h-0 overflow-hidden">
-                    <p className="max-w-[670px] font-serif text-[18px] leading-6 text-white/75">
+                    <p className="max-w-167.5 font-serif text-[18px] leading-6 text-white/75">
                       {faq.answer}
                     </p>
                   </div>

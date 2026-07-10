@@ -17,7 +17,7 @@ export default function DescargarPage() {
 
       <Logo className="text-white" />
 
-      <div className="flex max-w-[560px] flex-col items-center gap-5">
+      <div className="flex max-w-140 flex-col items-center gap-5">
         <Text as="h1" weight="bold" size={48} className="leading-tight">
           Descarga la app de Taveron
         </Text>

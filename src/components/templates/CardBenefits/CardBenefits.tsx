@@ -11,7 +11,7 @@ interface Benefit {
   icon: React.ReactNode;
 }
 
-const iconClass = "h-[30px] w-[30px] text-blue-normal";
+const iconClass = "h-7.5 w-7.5 text-blue-normal";
 
 const BagIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" className={iconClass} aria-hidden>
@@ -144,21 +144,21 @@ export const CardBenefits = () => {
   const [expandedIndex, setExpandedIndex] = useState(0);
 
   return (
-    <section className="relative h-[986px] w-full overflow-hidden bg-white">
-      <div className="absolute top-20 left-1/2 flex w-[652px] -translate-x-1/2 flex-col items-center gap-2.5">
+    <section className="relative h-246.5 w-full overflow-hidden bg-white">
+      <div className="absolute top-20 left-1/2 flex w-163 -translate-x-1/2 flex-col items-center gap-2.5">
         <Badge variant="outline">Nuestros beneficios</Badge>
         <Text
           as="h2"
           weight="bold"
           size={48}
-          className="text-blue-darker w-[652px] text-center leading-[58px]"
+          className="text-blue-darker w-163 text-center leading-[58px]"
         >
           Tu tarjeta, con ventajas reales
         </Text>
       </div>
 
-      <div className="absolute top-[232px] left-1/2 flex w-[1235px] -translate-x-1/2 items-start gap-20">
-        <div className="flex w-[587px] flex-col gap-2.5">
+      <div className="absolute top-58 left-1/2 flex w-308.75 -translate-x-1/2 items-start gap-20">
+        <div className="flex w-146.75 flex-col gap-2.5">
           {benefits.map((benefit, index) => {
             const isExpanded = index === expandedIndex;
             return (
@@ -167,7 +167,7 @@ export const CardBenefits = () => {
                 type="button"
                 onClick={() => setExpandedIndex(index)}
                 aria-expanded={isExpanded}
-                className="flex w-[587px] cursor-pointer items-center gap-2.5 rounded-[20px] bg-[#002749] px-5 py-[30px] text-left transition-colors duration-300 hover:bg-[#003462]"
+                className="flex w-146.75 cursor-pointer items-center gap-2.5 rounded-[20px] bg-[#002749] px-5 py-7.5 text-left transition-colors duration-300 hover:bg-[#003462]"
               >
                 <div className="flex flex-1 items-start gap-5">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-[#E6EEF6]">
@@ -216,7 +216,7 @@ export const CardBenefits = () => {
           })}
         </div>
 
-        <div className="relative h-[664px] w-[568px] shrink-0">
+        <div className="relative h-166 w-142 shrink-0">
           <Image
             src="/traveler.svg"
             alt="Viajero cruzando un puente colgante"

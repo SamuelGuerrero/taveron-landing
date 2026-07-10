@@ -4,12 +4,7 @@ import { Text } from "~/components/atoms";
 import { Badge } from "~/components/molecules";
 
 const LockIcon = () => (
-  <svg
-    viewBox="0 0 46 46"
-    fill="none"
-    className="h-[46px] w-[46px]"
-    aria-hidden
-  >
+  <svg viewBox="0 0 46 46" fill="none" className="h-11.5 w-11.5" aria-hidden>
     <rect
       x="12"
       y="20"
@@ -30,12 +25,7 @@ const LockIcon = () => (
 );
 
 const HeadphonesIcon = () => (
-  <svg
-    viewBox="0 0 46 46"
-    fill="none"
-    className="h-[46px] w-[46px]"
-    aria-hidden
-  >
+  <svg viewBox="0 0 46 46" fill="none" className="h-11.5 w-11.5" aria-hidden>
     <path
       d="M8 26v-3a15 15 0 0 1 30 0v3"
       stroke="#0056A3"
@@ -154,7 +144,7 @@ interface CardShellProps {
 
 const CardShell = ({ variant = "light", children }: CardShellProps) => (
   <div
-    className={`relative h-[412px] w-[437px] overflow-hidden rounded-[20px] ${
+    className={`relative h-103 w-109.25 overflow-hidden rounded-[20px] ${
       variant === "dark" ? "bg-[#003462] text-white" : "bg-white text-[#003462]"
     }`}
   >
@@ -171,7 +161,7 @@ const CardHeader = ({
   description: string;
   variant?: "light" | "dark";
 }) => (
-  <div className="absolute top-10 left-10 flex w-[357px] flex-col gap-2.5">
+  <div className="absolute top-10 left-10 flex w-89.25 flex-col gap-2.5">
     <Text
       weight="bold"
       size={30}
@@ -194,11 +184,11 @@ const ToggleRow = ({ label, on }: { label: string; on: boolean }) => (
       {label}
     </Text>
     <div
-      className={`relative h-6 w-[46px] rounded-full ${on ? "bg-blue-normal" : "bg-[#B5B8BA]"}`}
+      className={`relative h-6 w-11.5 rounded-full ${on ? "bg-blue-normal" : "bg-[#B5B8BA]"}`}
     >
       <div
-        className={`absolute top-1/2 h-[19px] w-[19px] -translate-y-1/2 rounded-full bg-white transition-all ${
-          on ? "left-[24px]" : "left-[2px]"
+        className={`absolute top-1/2 h-4.75 w-4.75 -translate-y-1/2 rounded-full bg-white transition-all ${
+          on ? "left-6" : "left-0.5"
         }`}
       />
     </div>
@@ -211,9 +201,9 @@ const ProtectionCard = () => (
       title="Protección de compras"
       description="Protección en compras elegibles y cobertura ante cargos no reconocidos."
     />
-    <div className="absolute top-[182px] left-[35px] flex w-[368px] flex-col gap-5 rounded-[10px] bg-[#FCFCFC] p-[30px]">
+    <div className="absolute top-45.5 left-8.75 flex w-92 flex-col gap-5 rounded-[10px] bg-[#FCFCFC] p-7.5">
       <LockIcon />
-      <div className="flex flex-col gap-[30px]">
+      <div className="flex flex-col gap-7.5">
         <ToggleRow label="Bloquear Tarjeta Digital" on />
         <ToggleRow label="Bloquear Tarjeta Física" on={false} />
       </div>
@@ -227,14 +217,14 @@ const SupportCard = () => (
       title="Atención 24/7"
       description="Bloquea tu tarjeta y recibe ayuda en cualquier momento."
     />
-    <div className="absolute top-[157px] left-1/2 flex w-[359px] -translate-x-1/2 flex-col gap-[17px] rounded-[17px] bg-[#FCFCFC] p-[17px]">
+    <div className="absolute top-39.25 left-1/2 flex w-89.75 -translate-x-1/2 flex-col gap-4.25 rounded-[17px] bg-[#FCFCFC] p-4.25">
       <HeadphonesIcon />
       <div className="flex flex-col gap-2">
         <button
           type="button"
-          className="bg-blue-normal flex h-[62px] cursor-pointer items-center justify-center gap-2 rounded-[8px] text-white"
+          className="bg-blue-normal flex h-15.5 cursor-pointer items-center justify-center gap-2 rounded-[8px] text-white"
         >
-          <WhatsAppIcon className="h-[27px] w-[27px]" />
+          <WhatsAppIcon className="h-6.75 w-6.75" />
           <Text weight="bold" size={13.55} className="leading-[17px]">
             Enviar whatsapp
           </Text>
@@ -242,9 +232,9 @@ const SupportCard = () => (
         </button>
         <button
           type="button"
-          className="text-blue-normal flex h-[62px] cursor-pointer items-center justify-center gap-1 rounded-[8px] bg-[#D9E6F1]"
+          className="text-blue-normal flex h-15.5 cursor-pointer items-center justify-center gap-1 rounded-[8px] bg-[#D9E6F1]"
         >
-          <MessageIcon className="h-[30px] w-[30px]" />
+          <MessageIcon className="h-7.5 w-7.5" />
           <Text weight="bold" size={13.55} className="leading-[17px]">
             Enviar correo electrónico
           </Text>
@@ -256,8 +246,8 @@ const SupportCard = () => (
 );
 
 const AppControlCard = () => (
-  <div className="relative h-[844px] w-[437px] overflow-hidden rounded-[20px] bg-[#003462] text-white">
-    <div className="absolute top-10 left-1/2 flex w-[360px] -translate-x-1/2 flex-col gap-2.5">
+  <div className="relative h-211 w-109.25 overflow-hidden rounded-[20px] bg-[#003462] text-white">
+    <div className="absolute top-10 left-1/2 flex w-90 -translate-x-1/2 flex-col gap-2.5">
       <Text weight="bold" size={30} className="leading-9">
         Control desde la app
       </Text>
@@ -265,13 +255,13 @@ const AppControlCard = () => (
         Consulta movimientos, controla gastos y recibe alertas en tiempo real.
       </Text>
     </div>
-    <div className="absolute top-[124px] left-1/2 -translate-x-1/2">
+    <div className="absolute top-31 left-1/2 -translate-x-1/2">
       <Image
         src="/img/iphone-14-pro.png"
         alt="App Taveron en iPhone"
         width={370}
         height={720}
-        className="h-[720px] w-[370px] object-contain"
+        className="h-180 w-92.5 object-contain"
       />
     </div>
   </div>
@@ -283,13 +273,13 @@ const KeypadCard = () => (
       title="Pagos online seguros"
       description="Tokenización y 3D Secure protegen cada transacción digital."
     />
-    <div className="absolute bottom-11 left-1/2 flex w-[379px] -translate-x-1/2 flex-col gap-[30px] rounded-[20px] bg-[#FCFCFC] p-[30px]">
+    <div className="absolute bottom-11 left-1/2 flex w-94.75 -translate-x-1/2 flex-col gap-7.5 rounded-[20px] bg-[#FCFCFC] p-7.5">
       <KeypadIcon />
       <div className="flex justify-center gap-2.5">
         {["4", "6", "1", "7"].map((n) => (
           <div
             key={n}
-            className="bg-blue-normal/10 flex h-[65px] w-[65px] items-center justify-center rounded-[7px]"
+            className="bg-blue-normal/10 flex h-16.25 w-16.25 items-center justify-center rounded-[7px]"
           >
             <Text weight="bold" size={46} className="text-blue-darker">
               {n}
@@ -307,7 +297,7 @@ const UsFlag = () => (
     alt="Estados Unidos"
     width={73}
     height={73}
-    className="h-[73px] w-[73px]"
+    className="h-18.25 w-18.25"
   />
 );
 
@@ -317,11 +307,11 @@ const BorderlessCard = () => (
       title="Compra sin fronteras"
       description="Ideal para viajes y compras en el extranjero."
     />
-    <div className="absolute top-[160px] left-[30px] flex w-[377px] items-start rounded-[15px] bg-[#FCFCFC] px-5 pt-4 pb-5">
+    <div className="absolute top-40 left-7.5 flex w-94.25 items-start rounded-[15px] bg-[#FCFCFC] px-5 pt-4 pb-5">
       <div className="flex flex-col gap-10">
         <UsFlag />
         <div className="flex flex-col gap-2.5">
-          <div className="flex flex-col gap-[3px]">
+          <div className="flex flex-col gap-0.75">
             <Text
               weight="bold"
               size={16}
@@ -360,22 +350,22 @@ const BorderlessCard = () => (
 export const ClassicBenefits = () => {
   return (
     <section className="w-full bg-[#F3F3F3] py-20">
-      <div className="mx-auto flex w-[1351px] flex-col items-center gap-10">
-        <div className="flex w-[964px] flex-col items-center gap-2.5">
+      <div className="mx-auto flex w-337.75 flex-col items-center gap-10">
+        <div className="flex w-241 flex-col items-center gap-2.5">
           <div className="flex flex-col items-center gap-5">
             <Badge variant="outline">Nuestros beneficios</Badge>
             <Text
               as="h2"
               weight="bold"
               size={48}
-              className="w-[709px] text-center leading-[58px] text-[#003462]"
+              className="w-177.25 text-center leading-[58px] text-[#003462]"
             >
               Compra donde sea, cuando sea.
             </Text>
           </div>
           <Text
             size={20}
-            className="w-[964px] text-center leading-7 text-[#0F0F0F]"
+            className="w-241 text-center leading-7 text-[#0F0F0F]"
           >
             Utiliza tu tarjeta Clásica Taveron en millones de comercios y
             cajeros alrededor del mundo.

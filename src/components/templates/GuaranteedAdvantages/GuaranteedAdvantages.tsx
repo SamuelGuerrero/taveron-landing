@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "~/components/atoms";
 import { Badge } from "~/components/molecules";
 
-const iconClass = "h-[41px] w-[41px] text-blue-normal";
+const iconClass = "h-10.25 w-10.25 text-blue-normal";
 
 const TableSettingsIcon = () => (
   <svg viewBox="0 0 41 41" fill="none" className={iconClass} aria-hidden>
@@ -122,16 +122,16 @@ const advantages: Advantage[] = [
 
 export const GuaranteedAdvantages = () => {
   return (
-    <section className="flex h-[800px] w-full items-center justify-center bg-white">
-      <div className="flex w-[1343px] flex-col items-center gap-[60px]">
+    <section className="flex h-200 w-full items-center justify-center bg-white">
+      <div className="flex w-335.75 flex-col items-center gap-15">
         <div className="flex flex-col items-center gap-2.5">
           <Badge variant="outline">La Ventaja Taveron</Badge>
-          <div className="flex w-[554px] flex-col items-center gap-5">
+          <div className="flex w-138.5 flex-col items-center gap-5">
             <Text
               as="h2"
               weight="bold"
               size={48}
-              className="text-blue-darker w-[554px] text-center leading-[58px]"
+              className="text-blue-darker w-138.5 text-center leading-[58px]"
             >
               Más que una Fintech:
               <br />
@@ -139,7 +139,7 @@ export const GuaranteedAdvantages = () => {
             </Text>
             <Text
               size={20}
-              className="text-blue-darker w-[554px] text-center leading-7"
+              className="text-blue-darker w-138.5 text-center leading-7"
             >
               Taveron combina innovación, cumplimiento y experiencia global:
             </Text>
@@ -150,12 +150,12 @@ export const GuaranteedAdvantages = () => {
           {advantages.map((advantage) => (
             <div
               key={advantage.title}
-              className="relative h-[276px] flex-1 rounded-[20px] bg-[#E6EEF6]"
+              className="relative h-69 flex-1 rounded-[20px] bg-[#E6EEF6]"
             >
-              <div className="absolute top-[23px] left-5 flex h-20 w-20 items-center justify-center rounded-[20px] bg-white">
+              <div className="absolute top-5.75 left-5 flex h-20 w-20 items-center justify-center rounded-[20px] bg-white">
                 {advantage.icon}
               </div>
-              <div className="absolute top-[123px] left-[29px] flex flex-col gap-2.5">
+              <div className="absolute top-30.75 left-7.25 flex flex-col gap-2.5">
                 <Text
                   weight="bold"
                   size={24}

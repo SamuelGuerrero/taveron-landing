@@ -6,7 +6,7 @@ import { Badge } from "~/components/molecules";
 
 export const JoinTaveron = () => {
   return (
-    <section className="bg-blue-darker relative h-[567px] w-full overflow-hidden">
+    <section className="bg-blue-darker relative h-141.75 w-full overflow-hidden">
       <Image
         src="/tarjetas/join-hero.svg"
         alt=""
@@ -27,18 +27,18 @@ export const JoinTaveron = () => {
         }}
       />
 
-      <div className="absolute top-1/2 left-[115px] flex w-[666px] -translate-y-1/2 flex-col gap-[50px] text-white">
+      <div className="absolute top-1/2 left-28.75 flex w-166.5 -translate-y-1/2 flex-col gap-12.5 text-white">
         <div className="flex flex-col gap-5">
           <Badge>Únete a Taveron</Badge>
           <Text
             as="h2"
             weight="bold"
             size={60}
-            className="w-[666px] leading-[73px]"
+            className="w-166.5 leading-[73px]"
           >
             Una app simplemente maravillosa
           </Text>
-          <Text size={24} className="w-[606px] leading-8">
+          <Text size={24} className="w-151.5 leading-8">
             Accede a la mejor experiencia financiera y maneja tus finanzas como
             nunca antes lo habías hecho.
           </Text>

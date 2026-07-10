@@ -21,7 +21,7 @@ export const Button = ({
   <button
     type={type}
     onClick={onClick}
-    className={`flex h-[60px] cursor-pointer items-center justify-center gap-1 rounded-[15px] bg-white px-6 transition-opacity hover:opacity-90 ${className ?? ""}`}
+    className={`flex h-15 cursor-pointer items-center justify-center gap-1 rounded-[15px] bg-white px-6 transition-opacity hover:opacity-90 ${className ?? ""}`}
   >
     {leftIcon}
     <Text weight="bold" size={16} className="text-blue-normal">
