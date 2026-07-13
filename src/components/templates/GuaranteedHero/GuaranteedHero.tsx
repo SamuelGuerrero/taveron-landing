@@ -78,14 +78,16 @@ export const GuaranteedHero = () => {
         </Text>
       </section>
 
-      <Image
-        src="/hero/classic.svg"
-        alt="Tarjeta Garantizada Taveron"
-        width={523}
-        height={523}
-        priority
-        className="pointer-events-none absolute top-155 left-1/2 z-10 h-130.75 w-130.75 max-w-none -translate-x-1/2 select-none"
-      />
+      <div className="pointer-events-none absolute top-155 left-1/2 z-10 -translate-x-1/2 select-none">
+        <Image
+          src="/hero/classic.svg"
+          alt="Tarjeta Garantizada Taveron"
+          width={523}
+          height={523}
+          priority
+          className="animate-breathe h-130.75 w-130.75 max-w-none object-contain will-change-transform"
+        />
+      </div>
     </div>
   );
 };
