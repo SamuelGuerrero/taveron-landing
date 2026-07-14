@@ -183,7 +183,7 @@ export const CardsCarousel = () => {
   };
 
   return (
-    <section className="relative h-260 w-full overflow-hidden bg-[#0F0F0F] text-white">
+    <section className="relative h-260 w-full overflow-hidden bg-black text-white">
       {/* <div
         aria-hidden
         className="pointer-events-none absolute top-81.75 left-[calc(50%-329px-329px)] h-164.5 w-164.5 rounded-full bg-[#2E2E2E] blur-[123.439px]"
