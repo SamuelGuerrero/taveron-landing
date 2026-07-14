@@ -71,12 +71,12 @@ const cardOptions: CardOption[] = [
     image: "/cards/thumbs/clasica.png",
     alt: "Tarjeta Clásica",
   },
-  {
-    label: "Empresarial",
-    href: "#",
-    image: "/cards/thumbs/empresarial.png",
-    alt: "Tarjeta Empresarial",
-  },
+  // {
+  //   label: "Empresarial",
+  //   href: "#",
+  //   image: "/cards/thumbs/empresarial.png",
+  //   alt: "Tarjeta Empresarial",
+  // },
   {
     label: "Infiniti",
     href: "/tarjetas/infinity",
@@ -111,9 +111,15 @@ export const Navbar = () => {
       className="absolute inset-x-0 top-0 z-50"
       onMouseLeave={() => setShowCardsDropdown(false)}
     >
-      <header className="flex h-22.5 items-center justify-between px-20.75">
+      <header
+        className={`flex h-22.5 items-center justify-between px-20.75 transition-colors duration-300 ${
+          showCardsDropdown ? "bg-white" : ""
+        }`}
+      >
         <Link href="/" aria-label="Taveron">
-          <Logo className="text-white" />
+          <Logo
+            className={showCardsDropdown ? "text-blue-darker" : "text-white"}
+          />
         </Link>
 
         <nav className="flex items-center gap-7.5">
@@ -131,7 +137,7 @@ export const Navbar = () => {
                     setShowCardsDropdown(false);
                   }
                 }}
-                className={`flex items-center gap-1.25 text-white ${isActive ? "" : "opacity-50"}`}
+                className={`flex items-center gap-1.25 ${showCardsDropdown ? "text-blue-darker" : "text-white"} ${isActive ? "" : "opacity-50"}`}
               >
                 <Text weight={isActive ? "bold" : 400} size={16}>
                   {link.label}
@@ -143,6 +149,7 @@ export const Navbar = () => {
         </nav>
 
         <DownloadCtaButton
+          className={showCardsDropdown ? "ring-blue-normal/25 ring-1" : ""}
           rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
         >
           Solicita tu tarjeta
