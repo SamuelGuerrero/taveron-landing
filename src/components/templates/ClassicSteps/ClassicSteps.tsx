@@ -81,11 +81,7 @@ export const ClassicSteps = () => {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className="flex w-full items-start gap-2.5 rounded-[20px] border border-white/10 p-5"
-                style={{
-                  background:
-                    "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 100%)",
-                }}
+                className="flex w-full items-start gap-2.5 rounded-[20px] border border-white/10 bg-linear-to-r from-white/0 to-white/5 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:to-white/10 hover:shadow-[0_12px_30px_rgba(0,0,0,0.25)]"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F0F7F9]">
                   <Text weight="bold" size={20} className="text-blue-darker">
