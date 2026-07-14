@@ -38,12 +38,12 @@ export const InfinityPrivileges = () => {
     <section className="relative h-275.75 w-full overflow-hidden bg-black text-white">
       <div
         aria-hidden
-        className="pointer-events-none absolute h-76.5 w-76.5 rounded-full bg-[#C4A35A] opacity-[0.35] blur-[68.4539px]"
+        className="pointer-events-none absolute h-76.5 w-76.5 rounded-full bg-[#C4A35A] opacity-[0.25] blur-[68.4539px]"
         style={{ left: "calc(50% - 153px - 288px - 71px)", top: 342 }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute h-76.5 w-76.5 rounded-full bg-[#C4A35A] opacity-40 blur-[68.4539px]"
+        className="pointer-events-none absolute h-76.5 w-76.5 rounded-full bg-[#C4A35A] opacity-20 blur-[68.4539px]"
         style={{ left: "calc(50% - 153px - 77px - 71px)", top: 342 }}
       />
       <div
