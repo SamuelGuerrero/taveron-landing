@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Text } from "~/components/atoms";
-import { Badge, Button } from "~/components/molecules";
+import { Badge, Button, DownloadCtaButton } from "~/components/molecules";
 
 const AUTO_ROTATE_MS = 10000;
 
@@ -31,6 +32,8 @@ interface HeroSlide {
   title: string;
   subtitle: string;
   ctaLabel: string;
+  /** When set, the CTA navigates here; otherwise it opens the download modal. */
+  ctaHref?: string;
   ellipsesOffsets?: [string, string, string];
   backgroundSrc?: string;
   image: {
@@ -48,7 +51,7 @@ const slides: HeroSlide[] = [
     title: "Libertad para moverte a tu ritmo",
     subtitle:
       "Soluciones pensadas para darte control, flexibilidad y confianza en cada paso de tu día.",
-    ctaLabel: "Explorar tarjetas",
+    ctaLabel: "Solicita tu tarjeta",
     ellipsesOffsets: [
       "calc(50%-329px-427px)",
       "calc(50%-329px+25.45px)",
@@ -68,6 +71,7 @@ const slides: HeroSlide[] = [
     subtitle:
       "Tarjeta Clásica Taveron, disfruta de tus compras con control y seguridad.",
     ctaLabel: "Conoce más",
+    ctaHref: "/tarjetas/clasica",
     backgroundSrc: "/hero/backgrounds/classic.svg",
     image: {
       src: "/hero/classic.svg",
@@ -82,6 +86,7 @@ const slides: HeroSlide[] = [
     title: "Una tarjeta para comenzar, avanzar y crecer",
     subtitle: "Ideal para iniciar o reconstruir tu historial.",
     ctaLabel: "Conoce más",
+    ctaHref: "/tarjetas/garantizada",
     backgroundSrc: "/hero/backgrounds/guaranteed.svg",
     image: {
       src: "/hero/guaranteed.svg",
@@ -96,6 +101,7 @@ const slides: HeroSlide[] = [
 const ELLIPSE_OPACITIES = [1, 0.7, 0.3];
 
 export const Hero = () => {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -161,38 +167,55 @@ export const Hero = () => {
         />
       ))}
 
-      {slides.map((slide, index) => (
-        <div
-          key={slide.title}
-          aria-hidden={index !== currentIndex}
-          className={`absolute top-49.25 left-28.75 flex w-180.5 flex-col gap-15 transition-opacity duration-700 ${
-            index === currentIndex
-              ? "opacity-100"
-              : "pointer-events-none opacity-0"
-          }`}
-        >
-          <div className="flex flex-col gap-5">
-            <Badge>{slide.badge}</Badge>
-
-            <Text as="h1" weight="bold" size={72} className="leading-20.5">
-              {slide.title}
-            </Text>
-
-            <Text size={24} className="leading-8">
-              {slide.subtitle}
-            </Text>
-          </div>
-
-          <Button
-            className="w-57.5!"
-            rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
+      {slides.map((slide, index) => {
+        const ctaHref = slide.ctaHref;
+        return (
+          <div
+            key={slide.title}
+            aria-hidden={index !== currentIndex}
+            className={`absolute top-49.25 left-28.75 flex w-180.5 flex-col gap-15 transition-opacity duration-700 ${
+              index === currentIndex
+                ? "opacity-100"
+                : "pointer-events-none opacity-0"
+            }`}
           >
-            {slide.ctaLabel}
-          </Button>
-        </div>
-      ))}
+            <div className="flex flex-col gap-5">
+              <Badge>{slide.badge}</Badge>
 
-      <div className="bg-blue-darker/50 bottom-24.375 absolute left-1/2 flex h-11.25 -translate-x-1/2 items-center gap-2.5 rounded-[40px] px-6.25">
+              <Text as="h1" weight="bold" size={72} className="leading-20.5">
+                {slide.title}
+              </Text>
+
+              <Text size={24} className="leading-8">
+                {slide.subtitle}
+              </Text>
+            </div>
+
+            {ctaHref ? (
+              <Button
+                className="w-57.5!"
+                rightIcon={
+                  <ChevronRight className="text-blue-normal h-6 w-6" />
+                }
+                onClick={() => router.push(ctaHref)}
+              >
+                {slide.ctaLabel}
+              </Button>
+            ) : (
+              <DownloadCtaButton
+                className="w-57.5!"
+                rightIcon={
+                  <ChevronRight className="text-blue-normal h-6 w-6" />
+                }
+              >
+                {slide.ctaLabel}
+              </DownloadCtaButton>
+            )}
+          </div>
+        );
+      })}
+
+      <div className="bg-blue-darker/50 absolute bottom-[97.5px] left-1/2 flex h-11.25 -translate-x-1/2 items-center gap-2.5 rounded-[40px] px-6.25">
         {slides.map((_, index) => {
           const isActive = index === currentIndex;
           return (
