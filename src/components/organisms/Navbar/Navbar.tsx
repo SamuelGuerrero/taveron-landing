@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Logo, Text } from "~/components/atoms";
@@ -95,7 +95,44 @@ export const Navbar = () => {
   const activeHref = "/";
   const [showCardsDropdown, setShowCardsDropdown] = useState(false);
   const [arrowLeft, setArrowLeft] = useState(0);
+  const [hidden, setHidden] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const cardsTriggerRef = useRef<HTMLAnchorElement>(null);
+
+  // Hide the navbar on scroll down, reveal it (with a dark backdrop) on
+  // scroll up. Matches the behavior on taveron.com.
+  useEffect(() => {
+    let lastScrollTop = 0;
+    let ticking = false;
+
+    const update = () => {
+      const scrollTop = window.scrollY;
+      if (scrollTop > 30) {
+        if (scrollTop > lastScrollTop) {
+          setHidden(true);
+          setScrolled(false);
+        } else {
+          setHidden(false);
+          setScrolled(true);
+        }
+      } else {
+        setHidden(false);
+        setScrolled(false);
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(update);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const openCardsDropdown = () => {
     const trigger = cardsTriggerRef.current;
@@ -108,12 +145,18 @@ export const Navbar = () => {
 
   return (
     <div
-      className="absolute inset-x-0 top-0 z-50"
+      className={`fixed inset-x-0 top-0 z-50 transition-transform duration-300 ease-out ${
+        hidden && !showCardsDropdown ? "-translate-y-full" : "translate-y-0"
+      }`}
       onMouseLeave={() => setShowCardsDropdown(false)}
     >
       <header
         className={`flex h-22.5 items-center justify-between px-20.75 transition-colors duration-300 ${
-          showCardsDropdown ? "bg-white" : ""
+          showCardsDropdown
+            ? "bg-white"
+            : scrolled
+              ? "bg-[#111827]/70 backdrop-blur-md"
+              : ""
         }`}
       >
         <Link href="/" aria-label="Taveron">
