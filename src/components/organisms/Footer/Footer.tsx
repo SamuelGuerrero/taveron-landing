@@ -34,7 +34,7 @@ const linkGroups: LinkGroup[] = [
       { label: "Recarga de celular", href: "#" },
       { label: "Comprar SIM", href: "#" },
       { label: "Portabilidad", href: "#" },
-      { label: "Tieneda", href: "#" },
+      { label: "Tienda", href: "#" },
     ],
   },
   {
@@ -166,11 +166,19 @@ export const Footer = () => {
         <div className="mt-7.5 flex items-end justify-between gap-8">
           <div className="flex flex-col gap-1.25 opacity-75">
             <Text size={14.84} className="leading-[140%]">
-              Contácto: <span className="font-bold">800 967 5003</span>
+              Contácto:{" "}
+              <a href="tel:8009675003" className="font-bold hover:underline">
+                800 967 5003
+              </a>
             </Text>
             <Text size={14.84} className="leading-[140%]">
               Atención al cliente:{" "}
-              <span className="font-bold">soporte@taveron.com</span>
+              <a
+                href="mailto:soporte@taveron.com"
+                className="font-bold hover:underline"
+              >
+                soporte@taveron.com
+              </a>
             </Text>
             <Text size={14.84} className="leading-[140%]">
               Calle Juan E García #171, Colonia Centro Torreón Coahuila, México
