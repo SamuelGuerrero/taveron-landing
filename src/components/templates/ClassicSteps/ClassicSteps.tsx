@@ -41,15 +41,15 @@ export const ClassicSteps = () => {
     <section className="bg-blue-darker relative h-275.75 w-full overflow-hidden text-white">
       <div
         aria-hidden
-        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px-341.8px)] rounded-full opacity-[0.59] blur-[90.4959px]"
+        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px-341.8px)] rounded-full opacity-30 blur-[90.4959px]"
       />
       <div
         aria-hidden
-        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px-10.1px)] rounded-full opacity-70 blur-[90.4959px]"
+        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px-10.1px)] rounded-full opacity-[0.35] blur-[90.4959px]"
       />
       <div
         aria-hidden
-        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px+341.8px)] rounded-full opacity-30 blur-[90.4959px]"
+        className="bg-blue-normal h-120.6 w-120.6 pointer-events-none absolute top-69.75 left-[calc(50%-241.2px+341.8px)] rounded-full opacity-15 blur-[90.4959px]"
       />
 
       <div className="absolute top-29.5 left-1/2 flex w-243.75 -translate-x-1/2 flex-col items-center gap-12.5">
