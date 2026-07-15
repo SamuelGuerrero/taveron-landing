@@ -6,5 +6,17 @@ export const metadata: Metadata = {
 };
 
 export default function SoportePage() {
-  return <UnderConstruction />;
+  return (
+    <UnderConstruction
+      badge="✦ En mantenimiento"
+      title={
+        <>
+          Estamos en
+          <br />
+          mantenimiento
+        </>
+      }
+      subtitle="Estamos realizando mejoras en el sitio. Vuelve pronto para una mejor experiencia."
+    />
+  );
 }

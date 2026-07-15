@@ -1,8 +1,25 @@
+import { type ReactNode } from "react";
 import Image from "next/image";
 import { Text } from "~/components/atoms";
 import { Badge, StoreButtons } from "~/components/molecules";
 
-export const UnderConstruction = () => {
+interface UnderConstructionProps {
+  badge?: string;
+  title?: ReactNode;
+  subtitle?: string;
+}
+
+export const UnderConstruction = ({
+  badge = "✦ Estamos trabajando",
+  title = (
+    <>
+      Esta sección está
+      <br />
+      en construcción
+    </>
+  ),
+  subtitle = "Estamos mejorando esta sección para ofrecerte una mejor experiencia. Muy pronto estará disponible.",
+}: UnderConstructionProps) => {
   return (
     <section className="bg-blue-darker relative flex min-h-screen w-full items-center justify-center overflow-hidden px-6 py-32 text-center text-white">
       <Image
@@ -27,19 +44,16 @@ export const UnderConstruction = () => {
 
         <div className="flex flex-col items-center gap-5">
           <Badge variant="white" className="border-white">
-            ✦ Estamos trabajando
+            {badge}
           </Badge>
 
           <div className="flex flex-col items-center gap-2">
             <Text as="h1" weight="bold" size={72} className="leading-[82px]">
-              Esta sección está
-              <br />
-              en construcción
+              {title}
             </Text>
 
             <Text size={24} className="max-w-201.5 leading-8">
-              Estamos mejorando esta sección para ofrecerte una mejor
-              experiencia. Muy pronto estará disponible.
+              {subtitle}
             </Text>
           </div>
 
