@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Logo, Text } from "~/components/atoms";
 import { DownloadCtaButton } from "~/components/molecules";
 
@@ -92,7 +93,7 @@ const cardOptions: CardOption[] = [
 ];
 
 export const Navbar = () => {
-  const activeHref = "/";
+  const pathname = usePathname();
   const [showCardsDropdown, setShowCardsDropdown] = useState(false);
   const [arrowLeft, setArrowLeft] = useState(0);
   const [hidden, setHidden] = useState(false);
@@ -167,7 +168,9 @@ export const Navbar = () => {
 
         <nav className="flex items-center gap-7.5">
           {links.map((link) => {
-            const isActive = link.href === activeHref;
+            const isActive = link.hasDropdown
+              ? pathname.startsWith("/tarjetas")
+              : pathname === link.href;
             return (
               <Link
                 key={link.label}
