@@ -19,3 +19,4 @@ export * from "./InfinityQuote";
 export * from "./InfinityBenefits";
 export * from "./InfinityFAQ";
 export * from "./InfinityJoinTaveron";
+export * from "./UnderConstruction";
