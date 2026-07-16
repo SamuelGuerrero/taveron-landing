@@ -135,6 +135,7 @@ export const Navbar = () => {
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileCardsOpen, setMobileCardsOpen] = useState(false);
   const cardsTriggerRef = useRef<HTMLAnchorElement>(null);
 
   // Hide the navbar on scroll down, reveal it (with a dark backdrop) on
@@ -175,6 +176,7 @@ export const Navbar = () => {
   // Close the mobile menu whenever the route changes.
   useEffect(() => {
     setMobileOpen(false);
+    setMobileCardsOpen(false);
   }, [pathname]);
 
   // Lock body scroll while the mobile menu is open.
@@ -315,39 +317,106 @@ export const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu (full height) */}
       <div
-        className={`absolute inset-x-0 top-full origin-top bg-white shadow-[0_24px_60px_rgba(0,30,57,0.18)] transition-[opacity,transform] duration-300 ease-out lg:hidden ${
+        className={`absolute inset-x-0 top-full h-[calc(100dvh-5rem)] origin-top overflow-y-auto bg-white shadow-[0_24px_60px_rgba(0,30,57,0.18)] transition-[opacity,transform] duration-300 ease-out lg:hidden ${
           mobileOpen
             ? "translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-3 opacity-0"
         }`}
       >
-        <nav className="flex flex-col gap-1 px-5 py-4 sm:px-8">
-          {links.map((link) => {
-            const isActive = link.hasDropdown
-              ? pathname.startsWith("/tarjetas")
-              : pathname === link.href;
-            return (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className={`rounded-xl px-3 py-3 transition-colors hover:bg-black/5 ${
-                  isActive ? "bg-black/5" : ""
-                }`}
-              >
-                <Text
-                  weight={isActive ? "bold" : 400}
-                  size={18}
-                  className="text-blue-darker"
+        <nav className="flex min-h-full flex-col px-5 py-4 sm:px-8">
+          <div className="flex flex-col gap-1">
+            {links.map((link) => {
+              const isActive = link.hasDropdown
+                ? pathname.startsWith("/tarjetas")
+                : pathname === link.href;
+
+              if (link.hasDropdown) {
+                return (
+                  <div key={link.label}>
+                    <button
+                      type="button"
+                      aria-expanded={mobileCardsOpen}
+                      onClick={() => setMobileCardsOpen((v) => !v)}
+                      className={`flex w-full items-center justify-between rounded-xl px-3 py-3 transition-colors hover:bg-black/5 ${
+                        isActive ? "bg-black/5" : ""
+                      }`}
+                    >
+                      <Text
+                        weight={isActive ? "bold" : 400}
+                        size={18}
+                        className="text-blue-darker"
+                      >
+                        {link.label}
+                      </Text>
+                      <ChevronDown
+                        className={`text-blue-darker h-6 w-6 transition-transform duration-300 ${
+                          mobileCardsOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+
+                    <div
+                      className={`grid transition-all duration-300 ease-out ${
+                        mobileCardsOpen
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <div className="flex flex-col gap-1 py-1 pl-3">
+                          {cardOptions.map((card) => (
+                            <Link
+                              key={card.label}
+                              href={card.href}
+                              onClick={() => setMobileOpen(false)}
+                              className="flex items-center gap-3 rounded-xl px-3 py-2.5 transition-colors hover:bg-black/5"
+                            >
+                              <Image
+                                src={card.image}
+                                alt={card.alt}
+                                width={94}
+                                height={152}
+                                className="h-12 w-7.5 rounded-[4px]"
+                              />
+                              <Text
+                                size={16}
+                                className="text-blue-darker leading-5"
+                              >
+                                {card.label}
+                              </Text>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`rounded-xl px-3 py-3 transition-colors hover:bg-black/5 ${
+                    isActive ? "bg-black/5" : ""
+                  }`}
                 >
-                  {link.label}
-                </Text>
-              </Link>
-            );
-          })}
-          <div className="mt-3 mb-1 px-1">
+                  <Text
+                    weight={isActive ? "bold" : 400}
+                    size={18}
+                    className="text-blue-darker"
+                  >
+                    {link.label}
+                  </Text>
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="mt-auto px-1 pt-6 pb-2">
             <DownloadCtaButton
               className="w-full!"
               rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
