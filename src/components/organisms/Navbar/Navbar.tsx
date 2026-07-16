@@ -45,6 +45,42 @@ const ChevronDown = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const MenuIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    className={className}
+    aria-hidden
+  >
+    <path
+      d="M4 7h16M4 12h16M4 17h16"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const CloseIcon = ({ className }: { className?: string }) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    className={className}
+    aria-hidden
+  >
+    <path
+      d="M6 6l12 12M18 6L6 18"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
 interface NavLink {
   label: string;
   href: string;
@@ -98,6 +134,7 @@ export const Navbar = () => {
   const [arrowLeft, setArrowLeft] = useState(0);
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const cardsTriggerRef = useRef<HTMLAnchorElement>(null);
 
   // Hide the navbar on scroll down, reveal it (with a dark backdrop) on
@@ -135,6 +172,19 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close the mobile menu whenever the route changes.
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
+  // Lock body scroll while the mobile menu is open.
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
+
   const openCardsDropdown = () => {
     const trigger = cardsTriggerRef.current;
     if (trigger) {
@@ -144,16 +194,20 @@ export const Navbar = () => {
     setShowCardsDropdown(true);
   };
 
+  const solidHeader = showCardsDropdown || mobileOpen;
+
   return (
     <div
       className={`fixed inset-x-0 top-0 z-50 transition-transform duration-300 ease-out ${
-        hidden && !showCardsDropdown ? "-translate-y-full" : "translate-y-0"
+        hidden && !showCardsDropdown && !mobileOpen
+          ? "-translate-y-full"
+          : "translate-y-0"
       }`}
       onMouseLeave={() => setShowCardsDropdown(false)}
     >
       <header
-        className={`flex h-22.5 items-center justify-between px-20.75 transition-colors duration-300 ${
-          showCardsDropdown
+        className={`flex h-20 items-center justify-between px-5 transition-colors duration-300 sm:px-8 lg:h-22.5 lg:px-20.75 ${
+          solidHeader
             ? "bg-white"
             : scrolled
               ? "bg-[#111827]/70 backdrop-blur-md"
@@ -161,12 +215,10 @@ export const Navbar = () => {
         }`}
       >
         <Link href="/" aria-label="Taveron">
-          <Logo
-            className={showCardsDropdown ? "text-blue-darker" : "text-white"}
-          />
+          <Logo className={solidHeader ? "text-blue-darker" : "text-white"} />
         </Link>
 
-        <nav className="flex items-center gap-7.5">
+        <nav className="hidden items-center gap-7.5 lg:flex">
           {links.map((link) => {
             const isActive = link.hasDropdown
               ? pathname.startsWith("/tarjetas")
@@ -194,16 +246,35 @@ export const Navbar = () => {
           })}
         </nav>
 
-        <DownloadCtaButton
-          className={showCardsDropdown ? "ring-blue-normal/25 ring-1" : ""}
-          rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
+        <div className="hidden lg:block">
+          <DownloadCtaButton
+            className={showCardsDropdown ? "ring-blue-normal/25 ring-1" : ""}
+            rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
+          >
+            Solicita tu tarjeta
+          </DownloadCtaButton>
+        </div>
+
+        <button
+          type="button"
+          aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen((v) => !v)}
+          className={`flex h-10 w-10 items-center justify-center lg:hidden ${
+            solidHeader ? "text-blue-darker" : "text-white"
+          }`}
         >
-          Solicita tu tarjeta
-        </DownloadCtaButton>
+          {mobileOpen ? (
+            <CloseIcon className="h-7 w-7" />
+          ) : (
+            <MenuIcon className="h-7 w-7" />
+          )}
+        </button>
       </header>
 
+      {/* Desktop cards mega-menu */}
       <div
-        className={`absolute inset-x-0 top-22.5 transition-[opacity,transform] duration-300 ease-out ${
+        className={`absolute inset-x-0 top-22.5 hidden transition-[opacity,transform] duration-300 ease-out lg:block ${
           showCardsDropdown
             ? "translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-2 opacity-0"
@@ -242,6 +313,49 @@ export const Navbar = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Mobile menu */}
+      <div
+        className={`absolute inset-x-0 top-full origin-top bg-white shadow-[0_24px_60px_rgba(0,30,57,0.18)] transition-[opacity,transform] duration-300 ease-out lg:hidden ${
+          mobileOpen
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-3 opacity-0"
+        }`}
+      >
+        <nav className="flex flex-col gap-1 px-5 py-4 sm:px-8">
+          {links.map((link) => {
+            const isActive = link.hasDropdown
+              ? pathname.startsWith("/tarjetas")
+              : pathname === link.href;
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`rounded-xl px-3 py-3 transition-colors hover:bg-black/5 ${
+                  isActive ? "bg-black/5" : ""
+                }`}
+              >
+                <Text
+                  weight={isActive ? "bold" : 400}
+                  size={18}
+                  className="text-blue-darker"
+                >
+                  {link.label}
+                </Text>
+              </Link>
+            );
+          })}
+          <div className="mt-3 mb-1 px-1">
+            <DownloadCtaButton
+              className="w-full!"
+              rightIcon={<ChevronRight className="text-blue-normal h-6 w-6" />}
+            >
+              Solicita tu tarjeta
+            </DownloadCtaButton>
+          </div>
+        </nav>
       </div>
     </div>
   );
