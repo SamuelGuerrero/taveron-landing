@@ -68,7 +68,7 @@ export const InfinityFAQ = () => {
   };
 
   return (
-    <section className="relative h-218.75 w-full bg-black text-white">
+    <section className="relative h-218.75 w-full overflow-x-clip bg-black text-white">
       <div
         aria-hidden
         className="pointer-events-none absolute z-50 h-83.5 w-83.5 rounded-full bg-[#C4A35A] opacity-20 blur-[128px]"

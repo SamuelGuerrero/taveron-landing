@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const InfinityStatement = () => {
   return (
-    <section className="relative h-235.75 w-full overflow-visible bg-black text-white">
+    <section className="relative h-235.75 w-full overflow-x-clip bg-black text-white">
       <div
         aria-hidden
         className="pointer-events-none absolute h-33.25 w-33.25 rounded-full bg-[#C4A35A] blur-[127px]"
